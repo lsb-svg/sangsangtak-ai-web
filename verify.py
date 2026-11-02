@@ -12,8 +12,27 @@ class Check(HTMLParser):
         a=dict(attrs)
         if tag=='a' and 'href' in a:self.links.append(a['href'])
         if tag=='img':self.images.append(a.get('src',''))
+qas=list((root/'questions').glob('*.json'))
+assert len(qas)>=8
+reviewed_qas=[json.loads(f.read_text(encoding='utf-8'))['id'] for f in qas if json.loads(f.read_text(encoding='utf-8'))['review_status']=='reviewed']
+hold_qas=[json.loads(f.read_text(encoding='utf-8'))['id'] for f in qas if json.loads(f.read_text(encoding='utf-8'))['review_status']!='reviewed']
+assert len(reviewed_qas)==6 and len(hold_qas)==2
+
 files=list(dist.rglob('*.html'))
-assert len(files)==4,files
+assert len(files)==4+len(reviewed_qas),(len(files),4+len(reviewed_qas))
+
+# Verify hold files are completely absent from dist/ and index.html
+for hid in hold_qas:
+    assert not (dist/'questions'/(hid+'.html')).exists(), f'Hold file {hid}.html must not exist in dist'
+index_html=(dist/'index.html').read_text(encoding='utf-8')
+for hid in hold_qas:
+    assert f'questions/{hid}.html' not in index_html, f'Hold file {hid} must not be referenced in index.html'
+
+# Verify largeball guide is marked noindex and excluded from sitemap
+largeball_guide=(dist/'largeball/largeball-differences.html').read_text(encoding='utf-8')
+assert '<meta name="robots" content="noindex, follow">' in largeball_guide, 'largeball guide must be noindex'
+assert 'largeball-differences.html' not in (dist/'sitemap.xml').read_text(encoding='utf-8'), 'noindex page must not be in sitemap'
+
 for page in files:
     text=page.read_text(encoding='utf-8');p=Check(page);p.feed(text)
     for link in p.links+p.images:
@@ -24,6 +43,19 @@ for page in files:
     assert cfg['store_links']['android'] in p.links
     assert cfg['store_links']['ios'] in p.links
     assert 'localhost' not in text and '{{' not in text
-ET.parse(dist/'sitemap.xml')
+sitemap_tree=ET.parse(dist/'sitemap.xml')
 assert 'sitemap.xml' in (dist/'robots.txt').read_text()
-print('VERIFY OK:',len(files),'pages, all relative assets, store links, sitemap parsed')
+sitemap_locs=[e.text for e in sitemap_tree.findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+assert len(sitemap_locs)==3+len(reviewed_qas),(len(sitemap_locs),3+len(reviewed_qas))
+print('VERIFY OK:',len(files),'pages (4 base + 6 approved QAs), relative assets, store links, sitemap parsed')
+
+# QA quality checks for reviewed questions
+for rid in reviewed_qas:
+    obj=json.loads((root/'questions'/(rid+'.json')).read_text(encoding='utf-8'))
+    output=dist/'questions'/(rid+'.html')
+    assert output.is_file()
+    raw=output.read_text(encoding='utf-8')
+    assert obj['question'] in raw and obj['answer'] in raw
+    assert '<meta name="robots" content="index, follow">' in raw
+    assert 'google.com/search?' not in raw
+print(f'QA VERIFY OK: {len(reviewed_qas)} reviewed QAs generated in dist and sitemap; {len(hold_qas)} hold QAs strictly excluded')

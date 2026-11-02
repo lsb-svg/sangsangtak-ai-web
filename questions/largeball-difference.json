@@ -1,0 +1,15 @@
+{
+  "id": "largeball-difference",
+  "question": "라지볼과 일반 탁구는 무엇이 다른가요?",
+  "category": "라지볼",
+  "app_session": "AI 장비추천",
+  "answer": "라지볼은 공과 일부 경기 용구·운영 규정이 일반 탁구와 다를 수 있습니다. 실제 기준은 참가 단체와 대회가 지정한 최신 규정입니다.",
+  "steps": [
+    "참가하려는 대회의 공식 요강부터 확인합니다.",
+    "공·러버·네트·경기방식을 각각 대조합니다.",
+    "다른 국가나 단체의 규정을 국내 대회에 그대로 적용하지 않습니다."
+  ],
+  "related_guide": "largeball/largeball-differences.html",
+  "review_status": "editorial_review_required",
+  "reference_note": "검토 보류: 대한탁구협회 및 국제 라지볼 표준 규격(공 44mm, 네트 17.25cm, 핌플아웃 러버)과 국내 각 지역 대회별 로컬 룰 적용일자 세부 검토 진행 중."
+}
