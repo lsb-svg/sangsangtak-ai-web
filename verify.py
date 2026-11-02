@@ -18,8 +18,15 @@ reviewed_qas=[json.loads(f.read_text(encoding='utf-8'))['id'] for f in qas if js
 hold_qas=[json.loads(f.read_text(encoding='utf-8'))['id'] for f in qas if json.loads(f.read_text(encoding='utf-8'))['review_status']!='reviewed']
 assert len(reviewed_qas)==6 and len(hold_qas)==2
 
+# Verify Google Search Console verification file
+google_files=list(dist.glob('google*.html'))
+assert len(google_files)==1, 'Google verification file must exist in dist root'
+assert google_files[0].name=='googlecdd3231b60f25ebe.html', 'Google verification file name mismatch'
+assert google_files[0].read_text(encoding='utf-8').strip()=='google-site-verification: googlecdd3231b60f25ebe.html', 'Google verification file content mismatch'
+
 files=list(dist.rglob('*.html'))
-assert len(files)==4+len(reviewed_qas),(len(files),4+len(reviewed_qas))
+content_files=[p for p in files if not p.name.startswith('google')]
+assert len(content_files)==4+len(reviewed_qas),(len(content_files),4+len(reviewed_qas))
 
 # Verify hold files are completely absent from dist/ and index.html
 for hid in hold_qas:
@@ -33,7 +40,7 @@ largeball_guide=(dist/'largeball/largeball-differences.html').read_text(encoding
 assert '<meta name="robots" content="noindex, follow">' in largeball_guide, 'largeball guide must be noindex'
 assert 'largeball-differences.html' not in (dist/'sitemap.xml').read_text(encoding='utf-8'), 'noindex page must not be in sitemap'
 
-for page in files:
+for page in content_files:
     text=page.read_text(encoding='utf-8');p=Check(page);p.feed(text)
     for link in p.links+p.images:
         if not link or link=='#':raise AssertionError((page,link))
@@ -47,7 +54,8 @@ sitemap_tree=ET.parse(dist/'sitemap.xml')
 assert 'sitemap.xml' in (dist/'robots.txt').read_text()
 sitemap_locs=[e.text for e in sitemap_tree.findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
 assert len(sitemap_locs)==3+len(reviewed_qas),(len(sitemap_locs),3+len(reviewed_qas))
-print('VERIFY OK:',len(files),'pages (4 base + 6 approved QAs), relative assets, store links, sitemap parsed')
+assert 'googlecdd3231b60f25ebe.html' not in (dist/'sitemap.xml').read_text(), 'Google verification file must not be in sitemap'
+print('VERIFY OK:',len(content_files),'content pages (4 base + 6 approved QAs), google verification file in dist, relative assets, store links, sitemap parsed')
 
 # QA quality checks for reviewed questions
 for rid in reviewed_qas:

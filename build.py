@@ -105,6 +105,8 @@ def build():
     for url in sitemap_urls:ET.SubElement(ET.SubElement(root,'{'+ns+'}url'),'{'+ns+'}loc').text=url
     ET.ElementTree(root).write(DIST/'sitemap.xml',encoding='utf-8',xml_declaration=True)
     (DIST/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+PUBLIC_URL+'sitemap.xml\n',encoding='utf-8')
+    for f in ROOT.glob('google*.html'):
+        shutil.copy2(f,DIST/f.name)
     for p in DIST.rglob('*.html'):
         s=p.read_text(encoding='utf-8')
         assert 'localhost' not in s and '{{' not in s and '{%' not in s
