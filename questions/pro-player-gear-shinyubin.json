@@ -1,0 +1,19 @@
+{
+  "id": "pro-player-gear-shinyubin",
+  "question": "신유빈 선수가 사용하는 탁구 라켓과 러버는 무엇인가요?",
+  "category": "스타플레이어 장비",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "brand_sponsorship_and_match_record",
+  "source_url": "https://www.butterfly-korea.co.kr",
+  "verified_date": "2026-11-03",
+  "answer": "신유빈 선수는 후원사 브랜드 공시 및 주요 대회 기록 기준, 이너포스 레이어 ZLC 블레이드에 양면 디그닉스 05 러버 조합을 사용하는 것으로 알려져 있습니다 (대회나 시기에 따라 세팅이 달라질 수 있습니다).",
+  "steps": [
+    "용품사 공식 스폰서십 공시와 대회별 실사용 장비 차이를 점검합니다.",
+    "선수용 특수소재 블레이드와 고경도 러버는 개인 임팩트와 연습량에 맞춰 선택해야 합니다.",
+    "상상탁구 AI의 'AI 장비추천' 및 스타플레이어 장비관에서 다양한 선수들의 장비 구성을 비교해 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "reference_note": "검토 보류 후보: 용품사 브랜드 공시 자료 및 최신 대회 실사용 기록 교차 검증 중 (외부 비공개 유지)."
+}

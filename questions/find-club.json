@@ -3,6 +3,9 @@
   "question": "가까운 탁구장은 어떻게 찾나요?",
   "category": "탁구장",
   "app_session": "탁구장",
+  "feature_status": "released",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-11-03",
   "answer": "지역과 시설명으로 검색한 뒤 위치·운영 시간·이용 조건을 탁구장에 직접 확인하는 방법이 안전합니다.",
   "steps": [
     "상상탁구 AI의 탁구장 메뉴에서 지역별 정보를 살펴봅니다.",

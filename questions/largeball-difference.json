@@ -3,6 +3,9 @@
   "question": "라지볼과 일반 탁구는 무엇이 다른가요?",
   "category": "라지볼",
   "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_url": "https://ktta.sports.or.kr",
+  "verified_date": "2026-11-03",
   "answer": "라지볼은 공과 일부 경기 용구·운영 규정이 일반 탁구와 다를 수 있습니다. 실제 기준은 참가 단체와 대회가 지정한 최신 규정입니다.",
   "steps": [
     "참가하려는 대회의 공식 요강부터 확인합니다.",

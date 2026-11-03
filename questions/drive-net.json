@@ -1,8 +1,11 @@
 {
   "id": "drive-net",
   "question": "커트볼 드라이브가 네트에 걸리는 이유는?",
-  "category": "일반 탁구",
+  "category": "일반 탁구 및 기술",
   "app_session": "배우기",
+  "feature_status": "released",
+  "source_url": "https://ktta.sports.or.kr",
+  "verified_date": "2026-11-03",
   "answer": "하회전이 강한 공을 전진 방향으로만 치면 네트에 걸리기 쉽습니다. 공의 회전과 높이에 맞게 라켓 면과 스윙의 상향 성분을 조절해야 합니다.",
   "steps": [
     "상대의 하회전량과 공 높이를 먼저 관찰합니다.",

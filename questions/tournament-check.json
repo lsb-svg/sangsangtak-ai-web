@@ -1,8 +1,11 @@
 {
   "id": "tournament-check",
   "question": "전국 탁구대회 일정은 어디에서 확인하나요?",
-  "category": "대회",
+  "category": "전국 탁구대회",
   "app_session": "경기일정",
+  "feature_status": "released",
+  "source_url": "https://ktta.sports.or.kr",
+  "verified_date": "2026-11-03",
   "answer": "대회 일정과 접수 조건은 변경될 수 있어 주최 협회 원공지와 접수처를 우선 확인해야 합니다.",
   "steps": [
     "대회명·날짜·장소·종목을 교차 확인합니다.",

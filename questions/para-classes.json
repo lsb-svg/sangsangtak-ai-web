@@ -3,6 +3,9 @@
   "question": "장애인 탁구의 클래스 1~11은 무슨 뜻인가요?",
   "category": "장애인 탁구",
   "app_session": "경기일정",
+  "feature_status": "released",
+  "source_url": "https://www.ittf.com/para-table-tennis/",
+  "verified_date": "2026-11-03",
   "answer": "장애인 탁구의 클래스는 참가자의 경기 기능에 관한 분류 체계입니다. 일반적으로 1~5는 휠체어, 6~10은 입식, 11은 지적장애 부문을 가리킵니다.",
   "steps": [
     "개인 등급은 자가진단만으로 결정할 수 없습니다.",

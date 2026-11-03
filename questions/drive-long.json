@@ -1,8 +1,11 @@
 {
   "id": "drive-long",
   "question": "드라이브 공이 자꾸 테이블 밖으로 나가는 이유는?",
-  "category": "일반 탁구",
+  "category": "일반 탁구 및 기술",
   "app_session": "배우기",
+  "feature_status": "released",
+  "source_url": "https://ktta.sports.or.kr",
+  "verified_date": "2026-11-03",
   "answer": "스윙 방향, 라켓 면, 임팩트 시점이 공의 높이와 회전에 맞지 않으면 공이 길어질 수 있습니다.",
   "steps": [
     "라켓 면이 과하게 열려 있는지 점검합니다.",

@@ -1,0 +1,102 @@
+{
+  "features": {
+    "learn": {
+      "name": "배우기",
+      "status": "released",
+      "badge": "제공 중",
+      "cta_text": "상상탁구 AI 앱의 '배우기' 메뉴에서 다양한 탁구 기술 팁과 레슨 가이드를 바로 확인하실 수 있습니다."
+    },
+    "gear": {
+      "name": "AI 장비추천",
+      "status": "released",
+      "badge": "제공 중",
+      "cta_text": "상상탁구 AI 앱의 'AI 장비추천' 메뉴에서 나의 수준과 플레이 스타일에 맞는 장비 정보를 탐색해 보세요."
+    },
+    "club": {
+      "name": "탁구장",
+      "status": "released",
+      "badge": "제공 중",
+      "cta_text": "상상탁구 AI 앱의 '탁구장' 메뉴에서 전국 탁구장 위치와 기본 시설 정보를 탐색하실 수 있습니다."
+    },
+    "tournament": {
+      "name": "경기일정",
+      "status": "released",
+      "badge": "제공 중",
+      "cta_text": "상상탁구 AI 앱의 '경기일정' 메뉴에서 최신 대회 일정과 접수 정보를 빠르게 탐색해 보세요."
+    },
+    "diagnosis": {
+      "name": "맞춤진단",
+      "status": "released",
+      "badge": "제공 중",
+      "cta_text": "상상탁구 AI 앱의 '맞춤진단' 메뉴에서 플레이스타일 진단 및 피드백 정보를 확인하실 수 있습니다 (세부 진단 항목은 지속 업데이트)."
+    },
+    "ranking": {
+      "name": "랭킹",
+      "status": "released",
+      "badge": "제공 중",
+      "cta_text": "상상탁구 AI 앱의 '랭킹' 메뉴에서 다양한 탁구 랭킹 및 관련 순위 정보를 확인하실 수 있습니다."
+    },
+    "home": {
+      "name": "홈",
+      "status": "released",
+      "badge": "제공 중",
+      "cta_text": "상상탁구 AI 공식 앱을 다운로드하고 탁구 통합 서비스를 경험해 보세요."
+    }
+  },
+  "categories": [
+    {
+      "id": "general-tech",
+      "name": "일반 탁구 및 기술",
+      "app_session": "배우기",
+      "feature_key": "learn"
+    },
+    {
+      "id": "star-gear",
+      "name": "스타플레이어 장비",
+      "app_session": "AI 장비추천",
+      "feature_key": "gear"
+    },
+    {
+      "id": "rubber-blade",
+      "name": "라켓·러버 및 AI 장비추천",
+      "app_session": "AI 장비추천",
+      "feature_key": "gear"
+    },
+    {
+      "id": "world-ranking",
+      "name": "세계·국내 탁구 랭킹",
+      "app_session": "랭킹",
+      "feature_key": "ranking"
+    },
+    {
+      "id": "national-tournaments",
+      "name": "전국 탁구대회",
+      "app_session": "경기일정",
+      "feature_key": "tournament"
+    },
+    {
+      "id": "table-tennis-clubs",
+      "name": "탁구장",
+      "app_session": "탁구장",
+      "feature_key": "club"
+    },
+    {
+      "id": "largeball",
+      "name": "라지볼",
+      "app_session": "AI 장비추천",
+      "feature_key": "gear"
+    },
+    {
+      "id": "para-tabletennis",
+      "name": "장애인 탁구",
+      "app_session": "경기일정",
+      "feature_key": "tournament"
+    },
+    {
+      "id": "custom-diagnosis",
+      "name": "맞춤진단",
+      "app_session": "맞춤진단",
+      "feature_key": "diagnosis"
+    }
+  ]
+}

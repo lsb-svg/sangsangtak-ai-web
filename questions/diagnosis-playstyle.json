@@ -1,0 +1,19 @@
+{
+  "id": "diagnosis-playstyle",
+  "question": "탁구 초보자에게 맞는 플레이 스타일과 전형은 어떻게 찾나요?",
+  "category": "맞춤진단",
+  "app_session": "맞춤진단",
+  "feature_status": "released",
+  "source_type": "coaching_and_lesson_principles",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-11-03",
+  "answer": "신체 조건, 스윙 궤적, 선호하는 플레이 거리(전진·중진), 공격 성향에 맞춰 셰이크핸드 드라이브형, 전진속공형, 수비형 등을 단계별로 점검하는 것이 좋습니다.",
+  "steps": [
+    "라켓 그립(셰이크핸드, 펜홀더 등)의 손에 쥐는 편안함과 안정성을 먼저 평가합니다.",
+    "포핸드와 백핸드 중 자연스럽게 힘이 실리는 주 타구 방향을 관찰합니다.",
+    "상상탁구 AI 앱의 '맞춤진단' 메뉴를 통해 플레이 성향을 진단하고 실력 향상을 위한 가이드를 확인해 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "reference_note": "검토 보류 후보: 초심자 전형 진단 알고리즘 및 세부 코칭 기준 교차 검토 진행 중 (외부 비공개 유지)."
+}

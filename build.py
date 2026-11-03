@@ -7,10 +7,30 @@ from urllib.parse import urlparse
 ROOT=Path(__file__).resolve().parent
 DIST=ROOT/'dist'
 CONFIG=json.loads((ROOT/'config.json').read_text(encoding='utf-8'))
+APP_CONFIG=json.loads((ROOT/'app_features.json').read_text(encoding='utf-8'))
+FEATURES=APP_CONFIG['features']
+CATEGORIES=APP_CONFIG['categories']
+VALID_CATEGORIES={c['name'] for c in CATEGORIES}
+
 PUBLIC_URL=os.getenv('PUBLIC_URL',CONFIG['public_url']).rstrip('/')+'/'
 if not PUBLIC_URL.startswith('https://') or urlparse(PUBLIC_URL).netloc == '':
     raise SystemExit('PUBLIC_URL must be an absolute HTTPS URL')
 ESC=lambda text: html.escape(str(text),quote=True)
+
+def check_duplicates(questions_data):
+    seen_ids = set()
+    seen_questions = set()
+    for item in questions_data:
+        qid = item['id']
+        if qid in seen_ids:
+            raise SystemExit(f'Duplicate question id detected: {qid}')
+        seen_ids.add(qid)
+        
+        # Normalized question text check (strip whitespaces and punctuation)
+        norm = re.sub(r'[\s\?\!\.,·]+', '', item['question'].lower())
+        if norm in seen_questions:
+            raise SystemExit(f'Duplicate or near-identical question text detected: {item["question"]}')
+        seen_questions.add(norm)
 
 def markdown(text):
     out=[]; in_list=False
@@ -29,6 +49,15 @@ def markdown(text):
         else: out.append('<p>'+ESC(s)+'</p>')
     close();return '\n'.join(out)
 
+def hero_downloads():
+    links=CONFIG['store_links']
+    return (
+        '<div class="hero-actions">'
+        f'<a class="btn-hero play" href="{ESC(links["android"])}" target="_blank" rel="noopener noreferrer">Google Play 다운로드</a>'
+        f'<a class="btn-hero appstore" href="{ESC(links["ios"])}" target="_blank" rel="noopener noreferrer">App Store 다운로드</a>'
+        '</div>'
+    )
+
 def downloads(depth):
     qr_prefix='../'*depth
     links=CONFIG['store_links']
@@ -43,10 +72,102 @@ def page(path,title,description,content,robots='index, follow'):
     depth=len(path.parts)-1;home='../'*depth+'index.html';url=PUBLIC_URL+path.as_posix()
     template=(ROOT/'templates/base.html').read_text(encoding='utf-8')
     robots_tag=f'<meta name="robots" content="{robots}">' if robots else ''
-    for token,value in {'__TITLE__':ESC(title),'__DESC__':ESC(description),'__CANONICAL__':ESC(url),'__HOME__':home,'__ASSET_PREFIX__':'../'*depth,'__ROBOTS__':robots_tag,'__CONTENT__':content}.items():template=template.replace(token,value)
+    replacements={
+        '__TITLE__': ESC(title),
+        '__DESC__': ESC(description),
+        '__CANONICAL__': ESC(url),
+        '__HOME__': home,
+        '__ASSET_PREFIX__': '../'*depth,
+        '__ROBOTS__': robots_tag,
+        '__HERO_DOWNLOADS__': hero_downloads(),
+        '__CONTENT__': content
+    }
+    for token,value in replacements.items():
+        template=template.replace(token,value)
     target=DIST/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(template,encoding='utf-8')
-    assert '__CONTENT__' not in template and '__ROBOTS__' not in template
+    assert '__CONTENT__' not in template and '__ROBOTS__' not in template and '__HERO_DOWNLOADS__' not in template
     return url
+
+def build_app_features_section():
+    # 7 key features with authentic app status, honest menu descriptions, and no exaggerated claims
+    cards=[
+        (
+            '📚',
+            '배우기',
+            '초보자 기본자세부터 하회전·상회전 드라이브, 서브, 리시브 등 체계적인 원포인트 레슨과 기술 팁을 앱에서 제공합니다.',
+            'live',
+            '정식 서비스 중',
+            False
+        ),
+        (
+            '🏓',
+            'AI 장비추천 &amp; 스타플레이어 장비관',
+            '개인 맞춤 라켓·러버 탐색 기능과 함께, 신유빈·장우진·마롱·하리모토 등 국내외 주요 선수들의 장비 조합 정보를 앱에서 살펴보실 수 있습니다 (정보 출처: 공식 브랜드 공시·대회 기록·인터뷰 및 대표 직접 확인 등으로 구분 관리).',
+            'live',
+            '정식 서비스 중',
+            True
+        ),
+        (
+            '📍',
+            '전국 탁구장 찾기',
+            '내 위치 주변 가까운 탁구장의 위치, 탁구대 수, 샤워실 등 편의시설과 운영시간 정보를 빠르게 안내합니다.',
+            'live',
+            '정식 서비스 중',
+            False
+        ),
+        (
+            '🏆',
+            '전국 탁구대회 일정',
+            '전국 오픈대회, 시·도 협회 대회, 생활체육 대회 일정과 참가 접수 기간, 대회 요강을 실시간으로 확인합니다.',
+            'live',
+            '정식 서비스 중',
+            False
+        ),
+        (
+            '🔍',
+            '맞춤진단',
+            '앱 내 맞춤진단 메뉴를 통해 플레이 스타일과 전형을 점검하고 실력 향상을 위한 가이드를 제공합니다 (세부 진단 항목은 지속 업데이트).',
+            'live',
+            '정식 서비스 중',
+            False
+        ),
+        (
+            '📊',
+            '탁구 랭킹',
+            '상상탁구 AI 앱의 랭킹 메뉴에서 국내외 탁구 선수들의 랭킹 및 순위 정보를 안내합니다.',
+            'live',
+            '정식 서비스 중',
+            False
+        ),
+        (
+            '🤝',
+            '일반탁구 · 라지볼 · 장애인 탁구',
+            '일반 규격 탁구뿐만 아니라 시니어 라지볼, 패럴림픽 장애인 탁구(클래스 1~11)까지 모두를 위한 통합 탁구 정보를 제공합니다.',
+            'live',
+            '통합 지원',
+            False
+        )
+    ]
+    card_htmls=[]
+    for icon,title,desc,status_cls,status_text,is_hl in cards:
+        hl_class=' highlight' if is_hl else ''
+        card_htmls.append(
+            f'<div class="feature-card{hl_class}">'
+            '<div class="feature-top">'
+            f'<span class="feature-icon">{icon}</span>'
+            f'<span class="feat-status {status_cls}">{status_text}</span>'
+            '</div>'
+            f'<h3>{title}</h3>'
+            f'<p>{desc}</p>'
+            '</div>'
+        )
+    return (
+        '<section class="panel">'
+        '<h2>상상탁구 AI 핵심 기능 한눈에 보기</h2>'
+        '<p class="muted">스마트폰 하나로 탁구의 기술 학습, 장비 탐색, 구장 및 대회 검색, 진단까지 원스톱으로 누리세요.</p>'
+        '<div class="feature-grid">' + ''.join(card_htmls) + '</div>'
+        '</section>'
+    )
 
 def build():
     if DIST.exists():shutil.rmtree(DIST)
@@ -70,34 +191,101 @@ def build():
         if in_sitemap:
             sitemap_urls.append(u)
         cards.append(f'<div class="card"><h3>{ESC(title)}</h3><p>{ESC(desc)}</p><a href="{rel.as_posix()}">글 읽기 →</a></div>')
-    sessions=['홈','배우기','AI 장비추천','탁구장','경기일정','맞춤진단','랭킹']
-    main='<section class="panel"><h2>상상탁구 AI를 소개합니다</h2><p>일반 탁구·라지볼·장애인 탁구 학습 정보와 장비, 구장, 대회 정보 등을 살펴보는 통합 앱입니다.</p><p><strong>7개 주요 메뉴:</strong> '+', '.join(sessions)+'</p></section><h2>탁구 정보 가이드</h2><div class="cards">'+''.join(cards)+'</div><section class="panel"><h2>공식 앱 다운로드</h2><p>PC에서는 QR을 스마트폰으로 스캔하고, 모바일에서는 스토어 버튼을 누르세요.</p>'+downloads(0)+'</section><p class="muted">이 사이트는 실증을 위한 독립 홍보 웹사이트입니다. 새로운 글 자동 생성 및 실제 설치 수 집계는 포함되지 않습니다.</p>'
-    # Question-first SEO landing pages: only reviewed questions generate HTML, appear in QA search, and enter sitemap.
+    
+    # Load and validate all question files
+    all_questions=[]
+    for item_path in sorted((ROOT/'questions').glob('*.json')):
+        data=json.loads(item_path.read_text(encoding='utf-8'))
+        required=('id','question','category','app_session','feature_status','answer','steps','related_guide','review_status','source_url','verified_date','reference_note')
+        if any(not data.get(k) for k in required):raise SystemExit('Missing question field: '+str(item_path))
+        if not re.fullmatch(r'[a-z0-9-]+',data['id']):raise SystemExit('Invalid question slug: '+data['id'])
+        if data['category'] not in VALID_CATEGORIES:raise SystemExit(f'Invalid category: {data["category"]} in {item_path.name}')
+        if data['feature_status'] not in ('released','upcoming','beta'):raise SystemExit(f'Invalid feature_status: {data["feature_status"]} in {item_path.name}')
+        if data['review_status'] not in ('editorial_review_required','reviewed'):raise SystemExit('Bad review status: '+item_path.name)
+        all_questions.append(data)
+    
+    # Check for duplicates across all question candidates
+    check_duplicates(all_questions)
+
     qa_cards=[]
     qa_items=[]
     hold_count=0
-    for item_path in sorted((ROOT/'questions').glob('*.json')):
-        data=json.loads(item_path.read_text(encoding='utf-8'))
-        required=('id','question','category','app_session','answer','steps','related_guide','review_status','reference_note')
-        if any(not data.get(k) for k in required):raise SystemExit('Missing question field: '+str(item_path))
-        if not re.fullmatch(r'[a-z0-9-]+',data['id']):raise SystemExit('Invalid question slug')
-        if data['review_status'] not in ('editorial_review_required','reviewed'):raise SystemExit('Bad review status')
+    approved_categories=set()
+    for data in all_questions:
         # Hold questions are completely excluded from dist HTML, home card list, and search index
         if data['review_status']!='reviewed':
             hold_count+=1
             continue
+        approved_categories.add(data['category'])
         rel=Path('questions')/(data['id']+'.html')
         guide='../'+data['related_guide']
         status_text='일반 정보 안내 · 적용 규정과 사실관계는 게시 후에도 정기 확인 필요'
-        content='<article class="panel qa-article"><p class="eyebrow">'+ESC(data['category'])+' · 관련 앱 메뉴: '+ESC(data['app_session'])+'</p><h2>'+ESC(data['question'])+'</h2><p class="answer">'+ESC(data['answer'])+'</p><h3>이렇게 확인하세요</h3><ol>'+''.join('<li>'+ESC(step)+'</li>' for step in data['steps'])+'</ol><p class="muted">'+ESC(data['reference_note'])+'</p><p class="review">'+ESC(status_text)+'</p><p><a href="'+ESC(guide)+'">관련 상세 가이드 읽기 →</a></p></article><section class="panel"><h2>상상탁구 AI에서 더 살펴보기</h2><p>앱의 '+ESC(data['app_session'])+' 메뉴와 연계된 정보를 탐색해 보세요.</p>'+downloads(1)+'</section>'
+        
+        # Branch CTA and status badge based on actual feature_status
+        f_status=data['feature_status']
+        feat_key=next((c['feature_key'] for c in CATEGORIES if c['name']==data['category']),'home')
+        feat_meta=FEATURES.get(feat_key,{})
+        if f_status=='released':
+            badge_html='<span class="status-badge live">정식 서비스 중</span>'
+            cta_html=f'<p class="feature-status">관련 앱 메뉴: <strong>{ESC(data["app_session"])}</strong> {badge_html}</p><p>{ESC(feat_meta.get("cta_text", "앱에서 관련 기능을 바로 이용해 보세요."))}</p>'
+        elif f_status=='beta':
+            badge_html='<span class="status-badge beta">베타 준비 중</span>'
+            cta_html=f'<p class="feature-status">관련 앱 메뉴: <strong>{ESC(data["app_session"])}</strong> {badge_html}</p><p>{ESC(feat_meta.get("cta_text", "현재 고도화 중인 기능입니다."))}</p>'
+        else:
+            badge_html='<span class="status-badge upcoming">출시 예정</span>'
+            cta_html=f'<p class="feature-status">관련 앱 메뉴: <strong>{ESC(data["app_session"])}</strong> {badge_html}</p><p>{ESC(feat_meta.get("cta_text", "향후 업데이트에서 정식 오픈될 예정입니다."))}</p>'
+            
+        content='<article class="panel qa-article"><p class="eyebrow">'+ESC(data['category'])+' · 앱 연동 메뉴: '+ESC(data['app_session'])+'</p><h2>'+ESC(data['question'])+'</h2><p class="answer">'+ESC(data['answer'])+'</p><h3>이렇게 확인하세요</h3><ol>'+''.join('<li>'+ESC(step)+'</li>' for step in data['steps'])+'</ol><p class="muted">'+ESC(data['reference_note'])+'</p><p class="review">'+ESC(status_text)+'</p><p><a href="'+ESC(guide)+'">관련 상세 가이드 읽기 →</a></p></article><section class="panel"><h2>상상탁구 AI에서 더 살펴보기</h2>'+cta_html+downloads(1)+'</section>'
         u=page(rel,data['question']+' | 상상탁구 AI',data['answer'][:130],content,robots='index, follow')
         urls.append(u)
         sitemap_urls.append(u)
-        qa_cards.append('<a class="qa-row" href="questions/'+ESC(data['id'])+'.html" data-question="' + ESC(data['question']+' '+data['category'])+'"><span>'+ESC(data['question'])+'</span><small>'+ESC(data['category'])+'</small></a>')
+        qa_cards.append('<a class="qa-row" href="questions/'+ESC(data['id'])+'.html" data-category="'+ESC(data['category'])+'" data-question="' + ESC(data['question']+' '+data['category'])+'"><span>'+ESC(data['question'])+'</span><small>'+ESC(data['category'])+'</small></a>')
         qa_items.append(data)
-    questions_section='<section class="panel"><h2>탁구 질문 · 답변 찾기</h2><p class="muted">구글에서 많이 묻는 유형을 참고한 예시 질문입니다. 실시간 구글 검색어 수집 결과가 아닙니다.</p><label for="question-search">궁금한 탁구 질문 검색</label><input id="question-search" class="qa-search" type="search" placeholder="예: 드라이브, 대회, 탁구장" autocomplete="off"><div id="qa-list">'+''.join(qa_cards)+'</div><p id="qa-empty" hidden>일치하는 질문이 없습니다. 다른 단어로 검색해 주세요.</p></section>'
-    main=questions_section+main
-    home_url=page(Path('index.html'),'상상탁구 AI | 공식 앱 다운로드 안내','탁구 배우기, 장비, 탁구장, 대회 일정, 랭킹 정보',main,robots='index, follow')
+    
+    # Render category filter chips
+    chips_html=['<button class="cat-chip active" data-cat="all">전체</button>']
+    for cat in CATEGORIES:
+        if cat['name'] in approved_categories:
+            chips_html.append(f'<button class="cat-chip" data-cat="{ESC(cat["name"])}">{ESC(cat["name"])}</button>')
+    chips_section='<div class="cat-filters">'+''.join(chips_html)+'</div>'
+    
+    questions_section=(
+        '<section class="panel">'
+        '<h2>탁구 질문 · 답변 찾기</h2>'
+        '<p class="muted">궁금한 질문을 검색하거나 카테고리별로 살펴보세요. 실시간 구글 검색어 수집 결과가 아닙니다.</p>'
+        '<div class="qa-search-box">'
+        '<label class="qa-search-label" for="question-search">궁금한 탁구 질문 검색</label>'
+        '<input id="question-search" class="qa-search" type="search" placeholder="예: 드라이브, 대회, 탁구장, 장애인, 러버" autocomplete="off">'
+        '</div>'
+        +chips_section+
+        '<div id="qa-list">'+''.join(qa_cards)+'</div>'
+        '<p id="qa-empty" hidden>일치하는 질문이 없습니다. 다른 단어나 카테고리를 선택해 주세요.</p>'
+        '</section>'
+    )
+    
+    app_features_section = build_app_features_section()
+    
+    guides_section=(
+        '<section class="panel">'
+        '<h2>탁구 정보 가이드</h2>'
+        '<p class="muted">초보자부터 동호인까지 참고할 수 있는 필수 기술 및 규정 안내 문서입니다.</p>'
+        '<div class="cards">'+''.join(cards)+'</div>'
+        '</section>'
+    )
+    
+    downloads_section=(
+        '<section class="panel">'
+        '<h2>공식 앱 다운로드</h2>'
+        '<p>PC에서는 QR을 스마트폰 카메라로 스캔하시고, 모바일에서는 아래 스토어 버튼을 터치하여 바로 설치하세요.</p>'
+        +downloads(0)+
+        '</section>'
+    )
+    
+    disclaimer='<p class="muted" style="text-align: center; margin-top: 1.5rem;">이 사이트는 실증 및 안내를 위한 상상탁구 AI 공식 홍보 웹사이트입니다. 새로운 글 자동 생성 및 실제 설치 수 집계는 포함되지 않습니다.</p>'
+    
+    main = app_features_section + questions_section + guides_section + downloads_section + disclaimer
+    
+    home_url=page(Path('index.html'),'상상탁구 AI | 탁구 정보와 공식 앱 다운로드','탁구 배우기, AI 장비추천, 스타플레이어 장비관, 전국 탁구장, 대회 일정, 맞춤진단, 랭킹 정보',main,robots='index, follow')
     urls.insert(0,home_url)
     sitemap_urls.insert(0,home_url)
     ns='http://www.sitemaps.org/schemas/sitemap/0.9'
@@ -111,4 +299,6 @@ def build():
         s=p.read_text(encoding='utf-8')
         assert 'localhost' not in s and '{{' not in s and '{%' not in s
     print(f'BUILD OK: {len(urls)} HTML pages generated ({hold_count} hold questions excluded from dist); Sitemap: {len(sitemap_urls)} URLs; URL: {PUBLIC_URL}')
-if __name__=='__main__':build()
+
+if __name__=='__main__':
+    build()

@@ -3,6 +3,9 @@
   "question": "라지볼 경기에서 어떤 러버를 사용해야 하나요?",
   "category": "라지볼",
   "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_url": "https://equipment.ittf.com/",
+  "verified_date": "2026-11-03",
   "answer": "허용 러버는 참가 대회의 적용 규정에 따라 확인해야 합니다. 한 단체의 요건을 모든 라지볼 대회에 적용해서는 안 됩니다.",
   "steps": [
     "대회 요강의 용구 항목을 읽습니다.",

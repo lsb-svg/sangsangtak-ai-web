@@ -1,0 +1,19 @@
+{
+  "id": "amateur-gear-leejunsang",
+  "question": "아마추어 탁구인 이준상의 라켓과 러버 구성은 어떻게 되나요?",
+  "category": "스타플레이어 장비",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "founder_direct_check",
+  "source_url": "https://sangsangtak.com/founder-verification (대표 선수 본인 직접 구두 확인)",
+  "verified_date": "2026-11-03",
+  "answer": "아마추어 선수의 장비 정보는 대표가 선수 본인에게 직접 구두 확인한 내용을 바탕으로 관리되며, 공식 문서 검증 절차 진행을 위해 현재 검토 보류 상태입니다.",
+  "steps": [
+    "대표가 선수 본인을 통해 직접 청취·확인한 1차 구두 정보를 바탕으로 기록합니다.",
+    "동호인 및 아마추어 선수는 시기나 대회 컨디션에 따라 장비 세팅이 변경될 수 있음을 감안합니다.",
+    "상상탁구 AI는 대표 직접 확인 자료와 공식 검증 절차를 거친 신뢰할 수 있는 정보만을 단계적으로 제공합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "reference_note": "출처 유형: 대표 선수 직접 확인 (founder_direct_check). 협회 공인 문서나 공개 프로필 부재로 검토 보류 유지 (외부 비공개)."
+}

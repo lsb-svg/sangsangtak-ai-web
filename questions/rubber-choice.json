@@ -1,8 +1,11 @@
 {
   "id": "rubber-choice",
   "question": "초보자는 탁구 라켓과 러버를 어떻게 고르나요?",
-  "category": "장비",
+  "category": "라켓·러버 및 AI 장비추천",
   "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_url": "https://equipment.ittf.com/",
+  "verified_date": "2026-11-03",
   "answer": "가격이나 선수 이름만으로 고르기보다 현재 수준, 스윙 방식, 컨트롤의 편안함을 먼저 고려하는 것이 좋습니다.",
   "steps": [
     "처음에는 공을 안정적으로 맞히기 쉬운 장비를 우선합니다.",

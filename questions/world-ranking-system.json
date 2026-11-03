@@ -1,0 +1,19 @@
+{
+  "id": "world-ranking-system",
+  "question": "세계 탁구 랭킹(ITTF/WTT)은 어떻게 산정되나요?",
+  "category": "세계·국내 탁구 랭킹",
+  "app_session": "랭킹",
+  "feature_status": "released",
+  "source_type": "official_international_regulation",
+  "source_url": "https://www.ittf.com/rankings/",
+  "verified_date": "2026-11-03",
+  "answer": "WTT/ITTF 세계 랭킹은 최근 52주 동안 참가한 공식 대회 중 상위 8개 대회의 획득 포인트를 합산하는 롤링 시스템으로 산정됩니다.",
+  "steps": [
+    "올림픽, 세계선수권, WTT 그랜드 스매시 등 대회 등급별 배점 차이를 공식 규정에서 확인합니다.",
+    "52주가 지나면 이전 대회의 포인트가 자동 소멸되는 롤링 방식을 대조합니다.",
+    "상상탁구 AI 앱의 '랭킹' 메뉴에서 다양한 탁구 랭킹 및 순위 정보를 살펴보실 수 있습니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "reference_note": "검토 보류 후보: ITTF/WTT 2026 최신 배점표 및 국내 랭킹 산정 세부 규정 추가 확인 중 (외부 비공개 유지)."
+}
