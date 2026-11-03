@@ -7,7 +7,7 @@ C005,스타플레이어·아마추어 장비관,하리모토 토모카즈 선수
 C006,스타플레이어·아마추어 장비관,펠릭스 르브런 선수가 사용하는 펜홀더 라켓과 러버는 무엇인가요?,AI 장비추천,pro-player-gear-felix-lebrun,hold,P1,starPlayerData.ts (Tibhar Global),2026-02-01,012,,
 C007,스타플레이어·아마추어 장비관,하리모토 미와 선수가 사용하는 탁구 라켓과 러버는 무엇인가요?,AI 장비추천,pro-player-gear-miwa-harimoto,hold,P1,starPlayerData.ts (Butterfly Global),2025-12-18,013,,
 C008,스타플레이어·아마추어 장비관,아마추어 탁구인 이준상의 라켓과 러버 구성은 어떻게 되나요?,AI 장비추천,amateur-gear-leejunsang,hold,P2,starPlayerData.ts (대표 제공),2026-08-21,014,,
-C009,스타플레이어·아마추어 장비관,임종훈 선수가 사용하는 탁구 라켓과 러버 세팅은?,AI 장비추천,pro-player-gear-limjonghoon,ready,P2,starPlayerData.ts (공식 확인),2026-01-10,022,,
+C009,스타플레이어·아마추어 장비관,임종훈 선수가 사용하는 탁구 라켓과 러버 세팅은?,AI 장비추천,pro-player-gear-limjonghoon,ready,P2,starPlayerData.ts (공식 확인),2026-01-10,034,,
 C010,스타플레이어·아마추어 장비관,안재현 선수의 라켓 블레이드와 러버 구성은?,AI 장비추천,pro-player-gear-ahnjaehyun,planned,P2,starPlayerData.ts (공식 확인),2026-01-12,023,,
 C011,스타플레이어·아마추어 장비관,이상수 선수가 사용하는 공격형 라켓과 러버는?,AI 장비추천,pro-player-gear-leesangsu,planned,P2,starPlayerData.ts (공식 확인),2026-01-08,024,,
 C012,스타플레이어·아마추어 장비관,오준성 선수의 주력 블레이드와 러버 조합은?,AI 장비추천,pro-player-gear-ohjunsung,planned,P2,starPlayerData.ts (공식 확인),2026-01-15,025,,
@@ -21,7 +21,7 @@ C019,스타플레이어·아마추어 장비관,하야타 히나 선수의 주�
 C020,스타플레이어·아마추어 장비관,이토 미마 선수의 이성 숏핌플 러버 및 라켓 조합은?,AI 장비추천,pro-player-gear-mimaito,planned,P2,starPlayerData.ts (Nittaku Global),2026-01-10,033,,
 C021,AI 장비추천,초보자는 탁구 라켓과 러버를 어떻게 고르나요?,AI 장비추천,rubber-choice,live,P0,content/questions/rubber-choice.json,2026-08-20,005,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/rubber-choice.html
 C022,AI 장비추천,드라이브 전형 탁구 동호인을 위한 추천 라켓과 러버 조합은?,AI 장비추천,gear-recommend-drive-combo,hold,P1,questions/gear-recommend-drive-combo.json,2026-08-28,015,,
-C023,AI 장비추천,탁구 입문 초보자를 위한 추천 완성형 라켓과 조합형 라켓 차이는?,AI 장비추천,gear-recommend-beginner-racket,ready,P2,app_features.json (AI 장비추천),2026-09-01,034,,
+C023,AI 장비추천,탁구 입문 초보자를 위한 추천 완성형 라켓과 조합형 라켓 차이는?,AI 장비추천,gear-recommend-beginner-racket,live,P2,app_features.json (AI 장비추천),2026-09-01,022,2026-11-03,https://lsb-svg.github.io/sangsangtak-ai-web/questions/gear-recommend-beginner-racket.html
 C024,AI 장비추천,이너카본과 아우터카본 블레이드의 반발력 및 타구감 차이는?,AI 장비추천,gear-recommend-inner-vs-outer,ready,P2,app_features.json (AI 장비추천),2026-09-01,035,,
 C025,AI 장비추천,탁구 러버 경도(45도·47.5도·50도)는 어떻게 선택해야 하나요?,AI 장비추천,gear-recommend-rubber-hardness,planned,P2,app_features.json (AI 장비추천),2026-09-01,036,,
 C026,AI 장비추천,점착성 러버와 일반 하이텐션 러버의 스핀 및 비거리 차이는?,AI 장비추천,gear-recommend-tacky-vs-tension,planned,P2,app_features.json (AI 장비추천),2026-09-01,037,,

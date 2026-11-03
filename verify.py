@@ -94,8 +94,8 @@ assert "현재 실사용 여부는 별도로 확인되지 않았습니다" in sh
 leejunsang_obj = json.loads((root / 'questions' / 'amateur-gear-leejunsang.json').read_text(encoding='utf-8'))
 assert leejunsang_obj.get('source_type') == 'founder_direct_check', "Amateur gear verified by founder must be marked founder_direct_check"
 
-# Exactly 6 approved QAs maintained for live deployment
-assert len(reviewed_qas) == 6, f"Expected exactly 6 reviewed QAs, got {len(reviewed_qas)}: {reviewed_qas}"
+# Exactly 7 approved QAs maintained for live deployment (6 initial + 1 approved new)
+assert len(reviewed_qas) == 7, f"Expected exactly 7 reviewed QAs, got {len(reviewed_qas)}: {reviewed_qas}"
 assert len(hold_qas) >= 6, f"Expected at least 6 hold QAs, got {len(hold_qas)}"
 
 # 3. Verify Google Search Console verification file in dist root

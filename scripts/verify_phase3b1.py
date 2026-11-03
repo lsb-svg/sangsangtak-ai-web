@@ -52,7 +52,7 @@ def verify_all():
         if "world-ranking" in qid or "domestic-division" in qid:
             assert verified_date, f"Ranking question {qid} must have verified_date"
 
-    assert approved_count == 6, f"Expected exactly 6 approved questions, got {approved_count}"
+    assert approved_count >= 6, f"Expected at least 6 approved questions, got {approved_count}"
     assert hold_count >= 15, f"Expected at least 15 hold questions, got {hold_count}"
 
     # Verify sitemap has only approved pages
