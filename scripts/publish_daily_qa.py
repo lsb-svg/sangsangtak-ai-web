@@ -68,7 +68,7 @@ def validate_question_content(q_json_path, expected_slug):
     
     return True, "Valid"
 
-def find_next_candidate(plan_rows, target_date_str):
+def find_next_candidate(plan_rows, target_date_str, dry_run=True, auto_approve=False):
     # Check if a question was already published on this target_date_str
     already_published_today = [
         r for r in plan_rows
@@ -82,8 +82,28 @@ def find_next_candidate(plan_rows, target_date_str):
     if not ready_rows:
         return None, "No candidates with content_status == 'ready' found"
     
-    ready_rows.sort(key=lambda x: x.get("publish_order", "999"))
-    return ready_rows[0], "Candidate found"
+    ready_rows.sort(key=lambda x: int(x.get("publish_order", "999")))
+    
+    # In DRY-RUN mode or when auto_approve is True, inspect the very first ready candidate
+    if dry_run or auto_approve:
+        return ready_rows[0], "Candidate found"
+    
+    # In live production mode without auto_approve:
+    # Scan in publish_order for the first candidate whose JSON is explicitly approved ('reviewed').
+    # Unapproved candidates remain safely held in queue and do NOT block approved candidates behind them.
+    for cand in ready_rows:
+        slug = cand["slug"]
+        q_file = QUESTIONS_DIR / f"{slug}.json"
+        if q_file.exists():
+            try:
+                data = json.loads(q_file.read_text(encoding="utf-8"))
+                if data.get("review_status") == "reviewed":
+                    return cand, "Approved candidate found"
+            except Exception:
+                continue
+                
+    # If no ready candidates are approved, return the first one so it reports AWAITING_EDITORIAL_APPROVAL
+    return ready_rows[0], "Candidate awaiting approval"
 
 def run_publisher(dry_run=True, force_date=None, auto_approve=False):
     now_kst = datetime.now(KST)
@@ -97,7 +117,7 @@ def run_publisher(dry_run=True, force_date=None, auto_approve=False):
     print(f"=== DAILY QA PUBLISHER (Mode: {'DRY-RUN' if dry_run else 'PRODUCTION'}) ===")
     print(f"Target Date (KST): {target_date}")
     
-    candidate, reason = find_next_candidate(plan_rows, target_date)
+    candidate, reason = find_next_candidate(plan_rows, target_date, dry_run=dry_run, auto_approve=auto_approve)
     if not candidate:
         print(f"[SKIP] {reason}")
         return {
@@ -174,6 +194,14 @@ def run_publisher(dry_run=True, force_date=None, auto_approve=False):
                 r["published_url"] = expected_url
                 break
         save_plan(plan_rows)
+        
+        # Output GitHub Actions step output if running in CI
+        github_output = os.getenv("GITHUB_OUTPUT")
+        if github_output and os.path.exists(github_output):
+            with open(github_output, "a", encoding="utf-8") as gh_out:
+                gh_out.write("has_published=true\n")
+                gh_out.write(f"published_slug={slug}\n")
+                gh_out.write(f"published_url={expected_url}\n")
         
         print(f"\n[PRODUCTION PUBLISH SUCCESS]")
         print(f"  - Updated {q_file.name} to reviewed")

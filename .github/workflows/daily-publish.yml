@@ -3,31 +3,44 @@ name: Daily QA Auto Publisher (Simulation & Verification)
 on:
   workflow_dispatch:
     inputs:
-      dry_run:
-        description: 'Run in DRY-RUN simulation mode (no disk writes, no commits)'
+      mode:
+        description: 'Publish execution mode'
         required: true
-        type: boolean
-        default: true
+        type: choice
+        options:
+          - 'dry-run'
+          - 'live'
+        default: 'dry-run'
 
-# Strict read-only default permissions (No write, no auto-push)
+# Concurrency group aligns with github-pages deployment to avoid parallel conflict
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+# Default permissions: read-only for safety.
+# In live publish mode, deploy job receives pages write & id-token write.
 permissions:
   contents: read
 
-# Scheduled daily execution is intentionally commented out for safety during Phase 3C-3C.
+# Scheduled daily execution is intentionally commented out for safety during Phase 3C-3G.
 # To be activated upon operational approval:
 # schedule:
 #   - cron: '0 0 * * *' # Every day at 00:00 UTC (09:00 KST)
 
-concurrency:
-  group: daily-qa-publish
-  cancel-in-progress: false
-
 jobs:
-  dry-run-and-verify:
+  publish-and-build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      has_published: ${{ steps.publisher.outputs.has_published }}
+      published_slug: ${{ steps.publisher.outputs.published_slug }}
+      published_url: ${{ steps.publisher.outputs.published_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,17 +51,53 @@ jobs:
         run: |
           python scripts/verify_content_plan.py
 
-      - name: Execute Daily QA Publisher DRY-RUN
+      - name: Execute Daily QA Publisher
+        id: publisher
         env:
           PUBLIC_URL: https://lsb-svg.github.io/sangsangtak-ai-web/
         run: |
-          python scripts/publish_daily_qa.py --dry-run
+          if [ "${{ github.event.inputs.mode }}" = "live" ]; then
+            python scripts/publish_daily_qa.py --live
+          else
+            python scripts/publish_daily_qa.py --dry-run
+          fi
 
-      - name: Verify Static Site Build & Isolation
+      - name: Build Static Site HTML & Sitemap
         env:
           PUBLIC_URL: https://lsb-svg.github.io/sangsangtak-ai-web/
         run: |
           python build.py
           python verify.py
           python scripts/verify_phase3b1.py
+
+      - name: Commit & Push state if published in live mode
+        if: steps.publisher.outputs.has_published == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content_plan_110.csv questions/
+          git commit -m "chore(auto-publish): release ${{ steps.publisher.outputs.published_slug }} [skip ci]"
+          git push origin main
+
+      - name: Upload GitHub Pages artifact
+        if: steps.publisher.outputs.has_published == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+  deploy-pages:
+    needs: publish-and-build
+    if: needs.publish-and-build.outputs.has_published == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
 
