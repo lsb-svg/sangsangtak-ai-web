@@ -1,0 +1,21 @@
+{
+  "id": "lesson-forehand-stroke-posture",
+  "question": "포핸드 롱 기본 스트로크의 올바른 폼과 체중 이동 방법은?",
+  "category": "일반 탁구 및 기술",
+  "app_session": "배우기",
+  "feature_status": "released",
+  "source_type": "app_curation_database",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-09-01",
+  "answer": "포핸드 롱 스트로크는 팔로만 휘두르는 것이 아니라, 무릎을 살짝 낮춘 기마 자세에서 오른쪽 허리와 골반을 뒤로 뺐다가 앞으로 회전시키며 오른발에서 왼발(오른손잡이 기준)로 체중을 이동시키며 정점에서 타구하는 것이 핵심입니다.",
+  "steps": [
+    "백스윙 시 라켓 끝이 처지지 않도록 테이블 높이보다 살짝 위를 유지하고 허리 회전과 함께 라켓을 뒤로 뺍니다.",
+    "임팩트 순간에는 팔꿈치를 축으로 전완을 자연스럽게 접어 올리며 이마나 눈썹 앞쪽에서 팔로스루를 마무리합니다.",
+    "상상탁구 AI 앱의 '배우기' 메뉴에서 포핸드 기본기부터 단계별 원포인트 레슨 영상과 자세 체크포인트를 확인해 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI 앱 '배우기' 초보자 기본자세 레슨 가이드 기준(확인일: 2026-09-01). 신체 회전 및 체중 이동 메커니즘 정리."
+}
+

@@ -1,0 +1,19 @@
+{
+  "id": "gear-recommend-drive-combo",
+  "question": "드라이브 전형 탁구 동호인을 위한 추천 라켓과 러버 조합은?",
+  "category": "라켓·러버 및 AI 장비추천",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "app_curation_database",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-08-28",
+  "answer": "드라이브 전형 동호인에게는 안정적인 볼 그립력의 5겹 순수합판이나 이너 아릴레이트 카본(ALC) 블레이드에 45~48도 경도의 텐션 러버 조합이 추천됩니다.",
+  "steps": [
+    "자신의 구력과 임팩트 파워에 맞춰 아우터 카본보다 컨트롤이 편한 이너 카본 또는 합판을 검토합니다.",
+    "포핸드는 회전력이 우수한 스핀형 러버를, 백핸드는 안정적인 쇼트와 블록이 가능한 러버를 배치합니다.",
+    "상상탁구 AI 앱의 'AI 장비추천' 메뉴에서 구력과 예산에 맞춘 최적의 장비 추천을 확인해 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "reference_note": "검토 보류: 앱 내 20개 표준 장비 추천 콤보 데이터셋 연계 검증 중 (외부 비공개 유지)."
+}

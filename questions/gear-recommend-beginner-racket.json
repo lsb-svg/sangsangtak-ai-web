@@ -1,0 +1,21 @@
+{
+  "id": "gear-recommend-beginner-racket",
+  "question": "탁구 입문 초보자를 위한 추천 완성형 라켓과 조합형 라켓 차이는?",
+  "category": "라켓·러버 및 AI 장비추천",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "app_curation_database",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-09-01",
+  "answer": "탁구 입문 시 일반적인 보급형 완제품 라켓은 대부분 러버 교체가 어렵고 탄력·회전력이 제한적이므로, 지속적인 실력 향상을 위해서는 목판(블레이드)과 러버를 별도로 부착하는 조합형 라켓(순수 5겹 합판이나 다루기 편한 입문용 카본 + 45~47.5도 올라운드 텐션 러버)을 구성하는 것이 일반적으로 권장됩니다.",
+  "steps": [
+    "보급형 완성형 라켓은 초기 비용이 저렴하지만 대다수 제품이 러버 교체에 적합하지 않아 정밀한 타구 감각을 발전시키는 데 한계가 있을 수 있습니다.",
+    "조합형 라켓은 공을 감싸 안는 타구감이 우수한 순수 5겹 합판이나 컨트롤형 카본에 양면 중경도 텐션 러버를 조합하는 것이 무난합니다.",
+    "상상탁구 AI 앱의 'AI 장비추천' 메뉴에서 나의 예산과 구력에 딱 맞는 입문 조합 견적을 바로 추천받아 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI 앱 'AI 장비추천' 입문 가이드 데이터 기준(확인일: 2026-09-01). 초보자 전용 조합형 라켓 추천 데이터셋 연동."
+}
+

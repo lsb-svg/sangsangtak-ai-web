@@ -1,0 +1,19 @@
+{
+  "id": "tournament-registration-guide",
+  "question": "생활체육 탁구대회 참가 신청 시 확인할 핵심 사항은 무엇인가요?",
+  "category": "전국 탁구대회",
+  "app_session": "경기일정",
+  "feature_status": "released",
+  "source_type": "tournament_association_announcement",
+  "source_url": "https://ktta.sports.or.kr",
+  "verified_date": "2026-08-25",
+  "answer": "대회 참가 신청 시에는 접수 시작·마감일, 참가 부수(오픈부·희망부 등) 자격, 사용 공인구 및 러버 규정을 먼저 확인해야 합니다.",
+  "steps": [
+    "주최 단체(아이핑, 오케이핑퐁, 협회 등)의 공식 대회 요강에서 참가 자격과 정원 마감 여부를 확인합니다.",
+    "자신의 지역 공인 부수와 전국 오픈 부수 인정 기준의 차이를 점검합니다.",
+    "상상탁구 AI 앱의 '경기일정' 메뉴에서 전국의 최신 대회 일정과 요강을 실시간으로 확인해 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "reference_note": "검토 보류: 주최사별 참가 신청 접수 프로세스 검증 진행 중 (외부 비공개 유지)."
+}

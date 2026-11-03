@@ -6,14 +6,14 @@
   "feature_status": "released",
   "source_type": "founder_direct_check",
   "source_url": "https://sangsangtak.com/founder-verification (대표 선수 본인 직접 구두 확인)",
-  "verified_date": "2026-11-03",
-  "answer": "아마추어 선수의 장비 정보는 대표가 선수 본인에게 직접 구두 확인한 내용을 바탕으로 관리되며, 공식 문서 검증 절차 진행을 위해 현재 검토 보류 상태입니다.",
+  "verified_date": "2026-08-21",
+  "answer": "이준상의 장비 구성은 Butterfly Viscaria ST 블레이드에 포핸드 Butterfly Dignics 09C, 백핸드 Butterfly Dignics 05 조합입니다 (상상탁구 AI 앱 등록 기준, 대표 선수 직접 확인).",
   "steps": [
-    "대표가 선수 본인을 통해 직접 청취·확인한 1차 구두 정보를 바탕으로 기록합니다.",
-    "동호인 및 아마추어 선수는 시기나 대회 컨디션에 따라 장비 세팅이 변경될 수 있음을 감안합니다.",
-    "상상탁구 AI는 대표 직접 확인 자료와 공식 검증 절차를 거친 신뢰할 수 있는 정보만을 단계적으로 제공합니다."
+    "블레이드(Butterfly Viscaria ST, ST 그립)와 러버 조합의 반발력 및 회전 특성을 파악합니다.",
+    "선수용 특수소재 블레이드와 고경도 러버는 개인의 타구 임팩트와 연습량에 맞춰 선택해야 합니다.",
+    "상상탁구 AI 앱의 'AI 장비추천' 및 스타플레이어 장비관에서 선수별 세부 장비 구성을 직접 살펴보실 수 있습니다."
   ],
   "related_guide": "index.html",
   "review_status": "editorial_review_required",
-  "reference_note": "출처 유형: 대표 선수 직접 확인 (founder_direct_check). 협회 공인 문서나 공개 프로필 부재로 검토 보류 유지 (외부 비공개)."
+  "reference_note": "출처 유형: 대표 직접 확인(founder_direct_check). 앱 등록 정보 기준(2026-08-21)이며, 아마추어 선수의 외부 검색 공개 동의 및 2차 공인 검증 절차 진행 전까지 보류(HOLD) 상태를 유지합니다."
 }

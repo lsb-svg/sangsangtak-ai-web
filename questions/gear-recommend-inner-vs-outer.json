@@ -1,0 +1,21 @@
+{
+  "id": "gear-recommend-inner-vs-outer",
+  "question": "이너카본과 아우터카본 블레이드의 반발력 및 타구감 차이는?",
+  "category": "라켓·러버 및 AI 장비추천",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "app_curation_database",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-09-01",
+  "answer": "아우터카본은 표면 목재 바로 아래 특수소재가 위치해 반발력이 상대적으로 높고 빠른 스피드를 내기 유리한 경향이 있으며, 이너카본은 중심 목재 쪽에 카본이 배치되어 타구 시 목판에 공이 머무는 감각(볼 그립감)과 안정적인 회전 컨트롤을 체감하기 좋은 특징이 있습니다.",
+  "steps": [
+    "임팩트 안정성을 높이고 회전 중심의 연속 드라이브 랠리를 선호한다면 이너카본 계열이 편안한 선택지가 될 수 있습니다.",
+    "빠른 템포의 전진 속공과 강한 파워 공격을 추구한다면 반발 탄성이 좋은 아우터카본 계열을 검토해 볼 수 있습니다.",
+    "상상탁구 AI 앱의 'AI 장비추천' 메뉴에서 나의 전형과 타구 습관을 입력하고 최적의 블레이드 소재를 진단해 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI 앱 'AI 장비추천' 블레이드 구조 비교 데이터셋 기준(확인일: 2026-09-01). 특수소재 위치별 특성 가이드."
+}
+

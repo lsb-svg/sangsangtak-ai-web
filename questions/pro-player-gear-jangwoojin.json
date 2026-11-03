@@ -1,0 +1,19 @@
+{
+  "id": "pro-player-gear-jangwoojin",
+  "question": "장우진 선수가 사용하는 탁구 라켓과 러버는 무엇인가요?",
+  "category": "스타플레이어 장비",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "tournament_match_record",
+  "source_url": "https://ktta.sports.or.kr",
+  "verified_date": "2026-01-15",
+  "answer": "장우진 선수는 Butterfly Viscaria Super ALC 블레이드에 전면(FH) Butterfly Dignics 09C, 후면(BH) Butterfly Dignics 05 러버를 사용하는 것으로 알려져 있습니다 (상상탁구 AI 앱 등록 정보 기준).",
+  "steps": [
+    "블레이드(Butterfly Viscaria Super ALC, FL 그립)와 러버 조합의 반발력 및 회전 특성을 파악합니다.",
+    "선수용 특수소재 블레이드와 고경도 러버는 개인의 타구 임팩트와 연습량에 맞춰 선택해야 합니다.",
+    "상상탁구 AI 앱의 'AI 장비추천' 메뉴와 스타플레이어 장비관에서 국내외 주요 선수들의 장비 구성을 비교해 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "reference_note": "출처 유형: tournament_match_record. 앱 등록 정보 기준 스냅샷(2026-01-15, 공식 확인)이며, 선수의 대회별 실사용 세팅 및 협찬 상황에 따라 변경될 수 있습니다 (외부 비공개 보류 유지)."
+}

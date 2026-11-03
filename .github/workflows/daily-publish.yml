@@ -1,0 +1,54 @@
+name: Daily QA Auto Publisher (Simulation & Verification)
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run in DRY-RUN simulation mode (no disk writes, no commits)'
+        required: true
+        type: boolean
+        default: true
+
+# Strict read-only default permissions (No write, no auto-push)
+permissions:
+  contents: read
+
+# Scheduled daily execution is intentionally commented out for safety during Phase 3C-3C.
+# To be activated upon operational approval:
+# schedule:
+#   - cron: '0 0 * * *' # Every day at 00:00 UTC (09:00 KST)
+
+concurrency:
+  group: daily-qa-publish
+  cancel-in-progress: false
+
+jobs:
+  dry-run-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify 110-Content Plan Integrity
+        run: |
+          python scripts/verify_content_plan.py
+
+      - name: Execute Daily QA Publisher DRY-RUN
+        env:
+          PUBLIC_URL: https://lsb-svg.github.io/sangsangtak-ai-web/
+        run: |
+          python scripts/publish_daily_qa.py --dry-run
+
+      - name: Verify Static Site Build & Isolation
+        env:
+          PUBLIC_URL: https://lsb-svg.github.io/sangsangtak-ai-web/
+        run: |
+          python build.py
+          python verify.py
+          python scripts/verify_phase3b1.py
+

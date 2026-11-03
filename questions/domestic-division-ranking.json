@@ -1,0 +1,19 @@
+{
+  "id": "domestic-division-ranking",
+  "question": "대한탁구협회 디비전 리그 랭킹과 동호인 부수 체계는 어떻게 되나요?",
+  "category": "세계·국내 탁구 랭킹",
+  "app_session": "랭킹",
+  "feature_status": "released",
+  "source_type": "ktta_official_notice",
+  "source_url": "https://ttadivision.sports.or.kr/statistic/moveBestPlayerRanking.do",
+  "verified_date": "2026-08-20",
+  "answer": "대한탁구협회 디비전 리그는 T4~T7 등 리그 등급별 승강제와 승점 포인트를 바탕으로 랭킹이 산정되며, 지역별 부수 규정과 연계됩니다.",
+  "steps": [
+    "참가하는 디비전 리그의 배점 기준과 전국/지역 랭킹 포인트 반영 방식을 확인합니다.",
+    "동호인 부수(1부~7부) 승급 기준과 대회 참가 자격을 각 시·도 탁구협회 요강에서 대조합니다.",
+    "상상탁구 AI 앱의 '랭킹' 메뉴에서 다양한 선수들의 순위 및 리그 정보를 살펴보실 수 있습니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "editorial_review_required",
+  "reference_note": "검토 보류: 2026 하반기 디비전 리그 포인트 승급 규정 최종 공시 대조 중 (외부 비공개 유지)."
+}

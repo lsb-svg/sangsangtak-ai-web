@@ -85,7 +85,11 @@ for f in qas:
 
 # Source type differentiation checks for hold items
 shinyubin_obj = json.loads((root / 'questions' / 'pro-player-gear-shinyubin.json').read_text(encoding='utf-8'))
-assert shinyubin_obj.get('source_type') == 'brand_sponsorship_and_match_record', "Pro player gear must specify brand and match record source"
+assert shinyubin_obj.get('source_type') in ('brand_sponsorship_and_match_record', 'public_media_and_manufacturer_announcement'), "Pro player gear must specify authentic source"
+assert shinyubin_obj['question'] == "신유빈 선수는 어떤 라켓과 러버를 사용하나요?", "Shin Yubin question title must match exact specification"
+assert "Butterfly Shin Yubin ALC" in shinyubin_obj['answer'], "Must mention exact blade from app data"
+assert "Butterfly Dignics 09C" in shinyubin_obj['answer'] and "Butterfly Dignics 05" in shinyubin_obj['answer'], "Must mention exact rubbers from app data"
+assert "현재 실사용 여부는 별도로 확인되지 않았습니다" in shinyubin_obj['answer'], "Must not claim current in-match use without verification"
 
 leejunsang_obj = json.loads((root / 'questions' / 'amateur-gear-leejunsang.json').read_text(encoding='utf-8'))
 assert leejunsang_obj.get('source_type') == 'founder_direct_check', "Amateur gear verified by founder must be marked founder_direct_check"
