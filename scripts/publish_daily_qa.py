@@ -68,8 +68,52 @@ def validate_question_content(q_json_path, expected_slug):
     
     return True, "Valid"
 
-def find_next_candidate(plan_rows, target_date_str, dry_run=True, auto_approve=False):
-    # Check if a question was already published on this target_date_str
+def verify_live_url_online(published_url, expected_keyword, timeout=10):
+    """Verifies that the published URL responds with HTTP 200 and contains expected keyword."""
+    import urllib.request
+    try:
+        req = urllib.request.Request(published_url, headers={"User-Agent": "Mozilla/5.0 (SangsangTak-SEO-HealthCheck)"})
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            if resp.status != 200:
+                return False, f"HTTP status {resp.status}"
+            content = resp.read().decode("utf-8", errors="replace")
+            if expected_keyword and expected_keyword not in content:
+                return False, f"Expected keyword '{expected_keyword}' missing from online HTML"
+            return True, "Online verified"
+    except Exception as e:
+        return False, f"Network/HTTP verification failed: {e}"
+
+def find_pending_or_unverified_live(plan_rows, check_network=False):
+    """
+    Checks if there is a 'live' record in CSV whose actual deployment is unverified or broken.
+    If check_network is True, checks the actual URL online.
+    Prioritizes recovering unverified deployments before publishing new candidates.
+    """
+    live_rows = [r for r in plan_rows if r.get("content_status") == "live"]
+    if not live_rows:
+        return None
+    
+    # Sort by published_date / publish_order to check the most recently published items
+    live_rows.sort(key=lambda x: (x.get("published_date", ""), x.get("publish_order", "")), reverse=True)
+    
+    if check_network:
+        recent_item = live_rows[0]
+        pub_url = recent_item.get("published_url", "")
+        slug = recent_item.get("slug", "")
+        if pub_url.startswith("https://"):
+            ok, msg = verify_live_url_online(pub_url, slug, timeout=5)
+            if not ok:
+                return recent_item, f"Last published item {slug} is not online ({msg}). Recovery required!"
+    return None
+
+def find_next_candidate(plan_rows, target_date_str, dry_run=True, auto_approve=False, check_network=False):
+    # STEP 0: Recovery priority check: is the last published live item broken or missing online?
+    unverified = find_pending_or_unverified_live(plan_rows, check_network=check_network)
+    if unverified:
+        item, reason = unverified
+        return item, f"[RECOVERY NEEDED] {reason}"
+
+    # STEP 1: Check if a question was already published on this target_date_str
     already_published_today = [
         r for r in plan_rows
         if r.get("published_date") == target_date_str and r.get("content_status") == "live"
@@ -77,7 +121,7 @@ def find_next_candidate(plan_rows, target_date_str, dry_run=True, auto_approve=F
     if already_published_today:
         return None, f"Already published on {target_date_str}: {already_published_today[0]['slug']}"
 
-    # Filter ready items sorted by publish_order
+    # STEP 2: Filter ready items sorted by publish_order
     ready_rows = [r for r in plan_rows if r.get("content_status") == "ready"]
     if not ready_rows:
         return None, "No candidates with content_status == 'ready' found"
@@ -105,7 +149,7 @@ def find_next_candidate(plan_rows, target_date_str, dry_run=True, auto_approve=F
     # If no ready candidates are approved, return the first one so it reports AWAITING_EDITORIAL_APPROVAL
     return ready_rows[0], "Candidate awaiting approval"
 
-def run_publisher(dry_run=True, force_date=None, auto_approve=False):
+def run_publisher(dry_run=True, force_date=None, auto_approve=False, check_network=False):
     now_kst = datetime.now(KST)
     target_date = force_date or now_kst.strftime("%Y-%m-%d")
     
@@ -117,7 +161,7 @@ def run_publisher(dry_run=True, force_date=None, auto_approve=False):
     print(f"=== DAILY QA PUBLISHER (Mode: {'DRY-RUN' if dry_run else 'PRODUCTION'}) ===")
     print(f"Target Date (KST): {target_date}")
     
-    candidate, reason = find_next_candidate(plan_rows, target_date, dry_run=dry_run, auto_approve=auto_approve)
+    candidate, reason = find_next_candidate(plan_rows, target_date, dry_run=dry_run, auto_approve=auto_approve, check_network=check_network)
     if not candidate:
         print(f"[SKIP] {reason}")
         return {
@@ -131,7 +175,32 @@ def run_publisher(dry_run=True, force_date=None, auto_approve=False):
     order = candidate["publish_order"]
     title = candidate["question_title"]
     q_file = QUESTIONS_DIR / f"{slug}.json"
-    
+    is_recovery = "[RECOVERY NEEDED]" in reason
+
+    if is_recovery:
+        print(f"\n[!] INITIATING DEPLOYMENT RECOVERY:")
+        print(f"  - Target: {order} / {cid} ({slug})")
+        print(f"  - Issue: {reason}")
+        print(f"  - Action: Triggering build & direct Pages redeployment for {slug} without modifying plan status.")
+        
+        expected_url = candidate.get("published_url") or f"{public_url}questions/{slug}.html"
+        
+        # If running in CI, export outputs so deploy-pages executes
+        github_output = os.getenv("GITHUB_OUTPUT")
+        if github_output and os.path.exists(github_output):
+            with open(github_output, "a", encoding="utf-8") as gh_out:
+                gh_out.write("has_published=true\n")
+                gh_out.write(f"published_slug={slug}\n")
+                gh_out.write(f"published_url={expected_url}\n")
+                gh_out.write("is_recovery=true\n")
+        
+        return {
+            "status": "RECOVERY_INITIATED",
+            "candidate": slug,
+            "url": expected_url,
+            "reason": reason
+        }
+
     print(f"\n[1] Next In Queue:")
     print(f"  - Order/ID: {order} / {cid}")
     print(f"  - Slug: {slug}")
@@ -224,8 +293,15 @@ if __name__ == "__main__":
     parser.add_argument("--live", action="store_true", help="Actually execute publish")
     parser.add_argument("--force-date", type=str, default=None, help="Force specific date (YYYY-MM-DD)")
     parser.add_argument("--auto-approve", action="store_true", help="Simulate approval sign-off")
+    parser.add_argument("--check-network", action="store_true", help="Verify online deployment health")
+    parser.add_argument("--verify-url", type=str, default=None, help="Verify a specific published URL online")
     args = parser.parse_args()
 
+    if args.verify_url:
+        ok, msg = verify_live_url_online(args.verify_url, None)
+        print(f"URL Verification: {'PASS' if ok else 'FAIL'} - {msg}")
+        sys.exit(0 if ok else 1)
+
     is_dry_run = not args.live
-    res = run_publisher(dry_run=is_dry_run, force_date=args.force_date, auto_approve=args.auto_approve)
+    res = run_publisher(dry_run=is_dry_run, force_date=args.force_date, auto_approve=args.auto_approve, check_network=args.check_network)
 

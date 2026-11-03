@@ -57,9 +57,9 @@ jobs:
           PUBLIC_URL: https://lsb-svg.github.io/sangsangtak-ai-web/
         run: |
           if [ "${{ github.event.inputs.mode }}" = "live" ]; then
-            python scripts/publish_daily_qa.py --live
+            python scripts/publish_daily_qa.py --live --check-network
           else
-            python scripts/publish_daily_qa.py --dry-run
+            python scripts/publish_daily_qa.py --dry-run --check-network
           fi
 
       - name: Build Static Site HTML & Sitemap
@@ -71,7 +71,7 @@ jobs:
           python scripts/verify_phase3b1.py
 
       - name: Commit & Push state if published in live mode
-        if: steps.publisher.outputs.has_published == 'true'
+        if: steps.publisher.outputs.has_published == 'true' && steps.publisher.outputs.is_recovery != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -99,5 +99,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify Live URL and Content Health
+        run: |
+          python scripts/publish_daily_qa.py --verify-url "${{ needs.publish-and-build.outputs.published_url }}"
 
 
