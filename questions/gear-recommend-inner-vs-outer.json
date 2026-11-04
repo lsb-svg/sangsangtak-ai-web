@@ -14,7 +14,7 @@
     "상상탁구 AI 앱의 'AI 장비추천' 메뉴에서 나의 전형과 타구 습관을 입력하고 최적의 블레이드 소재를 진단해 보세요."
   ],
   "related_guide": "index.html",
-  "review_status": "editorial_review_required",
+  "review_status": "reviewed",
   "manual_protected": true,
   "reference_note": "상상탁구 AI 앱 'AI 장비추천' 블레이드 구조 비교 데이터셋 기준(확인일: 2026-09-01). 특수소재 위치별 특성 가이드."
 }

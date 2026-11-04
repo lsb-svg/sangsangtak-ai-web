@@ -36,6 +36,7 @@ jobs:
       has_published: ${{ steps.publisher.outputs.has_published }}
       published_slug: ${{ steps.publisher.outputs.published_slug }}
       published_url: ${{ steps.publisher.outputs.published_url }}
+      is_recovery: ${{ steps.publisher.outputs.is_recovery }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
