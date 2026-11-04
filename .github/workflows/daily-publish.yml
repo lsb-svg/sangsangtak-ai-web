@@ -71,7 +71,7 @@ jobs:
           python scripts/verify_phase3b1.py
 
       - name: Commit & Push state if published in live mode
-        if: steps.publisher.outputs.has_published == 'true' && steps.publisher.outputs.is_recovery != 'true'
+        if: github.event.inputs.mode == 'live' && steps.publisher.outputs.has_published == 'true' && steps.publisher.outputs.is_recovery != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -80,14 +80,14 @@ jobs:
           git push origin main
 
       - name: Upload GitHub Pages artifact
-        if: steps.publisher.outputs.has_published == 'true'
+        if: github.event.inputs.mode == 'live' && steps.publisher.outputs.has_published == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/
 
   deploy-pages:
     needs: publish-and-build
-    if: needs.publish-and-build.outputs.has_published == 'true'
+    if: github.event.inputs.mode == 'live' && needs.publish-and-build.outputs.has_published == 'true'
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -110,6 +110,8 @@ jobs:
 
       - name: Verify Live URL and Content Health
         run: |
-          python scripts/publish_daily_qa.py --verify-url "${{ needs.publish-and-build.outputs.published_url }}"
+          python scripts/publish_daily_qa.py \
+            --verify-url "${{ needs.publish-and-build.outputs.published_url }}" \
+            --verify-slug "${{ needs.publish-and-build.outputs.published_slug }}"
 
 

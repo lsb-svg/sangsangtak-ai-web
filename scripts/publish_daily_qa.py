@@ -68,20 +68,57 @@ def validate_question_content(q_json_path, expected_slug):
     
     return True, "Valid"
 
-def verify_live_url_online(published_url, expected_keyword, timeout=10):
-    """Verifies that the published URL responds with HTTP 200 and contains expected keyword."""
+def verify_live_url_online(published_url, expected_keyword=None, expected_slug=None, retries=3, delay=5, timeout=10):
+    """
+    Verifies that the published URL responds with HTTP 200 and contains expected keyword/slug.
+    Includes limited retry mechanism for CDN/Pages propagation delays.
+    """
     import urllib.request
-    try:
-        req = urllib.request.Request(published_url, headers={"User-Agent": "Mozilla/5.0 (SangsangTak-SEO-HealthCheck)"})
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            if resp.status != 200:
-                return False, f"HTTP status {resp.status}"
-            content = resp.read().decode("utf-8", errors="replace")
-            if expected_keyword and expected_keyword not in content:
-                return False, f"Expected keyword '{expected_keyword}' missing from online HTML"
-            return True, "Online verified"
-    except Exception as e:
-        return False, f"Network/HTTP verification failed: {e}"
+    import time
+
+    # If expected_slug is provided, find its question title or signature from local question JSON
+    search_terms = []
+    if expected_keyword:
+        search_terms.append(expected_keyword)
+    if expected_slug:
+        search_terms.append(expected_slug)
+        q_path = QUESTIONS_DIR / f"{expected_slug}.json"
+        if q_path.exists():
+            try:
+                q_obj = json.loads(q_path.read_text(encoding="utf-8"))
+                if q_obj.get("question"):
+                    search_terms.append(q_obj["question"])
+            except Exception:
+                pass
+
+    last_err = "Unknown error"
+    for attempt in range(1, retries + 1):
+        try:
+            req = urllib.request.Request(
+                published_url,
+                headers={"User-Agent": "Mozilla/5.0 (SangsangTak-SEO-HealthCheck)"}
+            )
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                if resp.status != 200:
+                    last_err = f"HTTP status {resp.status}"
+                else:
+                    content = resp.read().decode("utf-8", errors="replace")
+                    # Check for matching term
+                    if search_terms:
+                        matched = any(term in content for term in search_terms)
+                        if not matched:
+                            last_err = f"Content mismatch: expected terms {search_terms} not found in page HTML"
+                        else:
+                            return True, f"Online verified on attempt {attempt}"
+                    else:
+                        return True, f"Online verified (HTTP 200) on attempt {attempt}"
+        except Exception as e:
+            last_err = f"Network/HTTP exception: {e}"
+
+        if attempt < retries:
+            time.sleep(delay)
+
+    return False, last_err
 
 def find_pending_or_unverified_live(plan_rows, check_network=False):
     """
@@ -181,11 +218,22 @@ def run_publisher(dry_run=True, force_date=None, auto_approve=False, check_netwo
         print(f"\n[!] INITIATING DEPLOYMENT RECOVERY:")
         print(f"  - Target: {order} / {cid} ({slug})")
         print(f"  - Issue: {reason}")
-        print(f"  - Action: Triggering build & direct Pages redeployment for {slug} without modifying plan status.")
         
         expected_url = candidate.get("published_url") or f"{public_url}questions/{slug}.html"
         
-        # If running in CI, export outputs so deploy-pages executes
+        if dry_run:
+            print(f"  - DRY-RUN: Deployment recovery needed for {slug}, but DRY-RUN simulation mode prevents execution.")
+            print(f"  - No disk writes, no CI output triggers, no deploy actions executed.")
+            return {
+                "status": "DRY_RUN_RECOVERY_DETECTED",
+                "candidate": slug,
+                "url": expected_url,
+                "reason": reason
+            }
+
+        print(f"  - Action: Triggering build & direct Pages redeployment for {slug} without modifying plan status.")
+        
+        # In LIVE mode only, export outputs so deploy-pages executes
         github_output = os.getenv("GITHUB_OUTPUT")
         if github_output and os.path.exists(github_output):
             with open(github_output, "a", encoding="utf-8") as gh_out:
@@ -295,10 +343,16 @@ if __name__ == "__main__":
     parser.add_argument("--auto-approve", action="store_true", help="Simulate approval sign-off")
     parser.add_argument("--check-network", action="store_true", help="Verify online deployment health")
     parser.add_argument("--verify-url", type=str, default=None, help="Verify a specific published URL online")
+    parser.add_argument("--verify-slug", type=str, default=None, help="Expected slug for verify-url check")
+    parser.add_argument("--verify-keyword", type=str, default=None, help="Expected text keyword for verify-url check")
     args = parser.parse_args()
 
     if args.verify_url:
-        ok, msg = verify_live_url_online(args.verify_url, None)
+        ok, msg = verify_live_url_online(
+            args.verify_url,
+            expected_keyword=args.verify_keyword,
+            expected_slug=args.verify_slug
+        )
         print(f"URL Verification: {'PASS' if ok else 'FAIL'} - {msg}")
         sys.exit(0 if ok else 1)
 
