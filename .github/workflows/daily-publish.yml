@@ -1,6 +1,8 @@
 name: Daily QA Auto Publisher (Simulation & Verification)
 
 on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at 00:00 UTC (09:00 KST)
   workflow_dispatch:
     inputs:
       mode:
@@ -21,11 +23,6 @@ concurrency:
 # In live publish mode, deploy job receives pages write & id-token write.
 permissions:
   contents: read
-
-# Scheduled daily execution is intentionally commented out for safety during Phase 3C-3G.
-# To be activated upon operational approval:
-# schedule:
-#   - cron: '0 0 * * *' # Every day at 00:00 UTC (09:00 KST)
 
 jobs:
   publish-and-build:
@@ -57,7 +54,7 @@ jobs:
         env:
           PUBLIC_URL: https://lsb-svg.github.io/sangsangtak-ai-web/
         run: |
-          if [ "${{ github.event.inputs.mode }}" = "live" ]; then
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.mode }}" = "live" ]; then
             python scripts/publish_daily_qa.py --live --check-network
           else
             python scripts/publish_daily_qa.py --dry-run --check-network
@@ -72,7 +69,7 @@ jobs:
           python scripts/verify_phase3b1.py
 
       - name: Commit & Push state if published in live mode
-        if: github.event.inputs.mode == 'live' && steps.publisher.outputs.has_published == 'true' && steps.publisher.outputs.is_recovery != 'true'
+        if: (github.event_name == 'schedule' || github.event.inputs.mode == 'live') && steps.publisher.outputs.has_published == 'true' && steps.publisher.outputs.is_recovery != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -81,14 +78,14 @@ jobs:
           git push origin main
 
       - name: Upload GitHub Pages artifact
-        if: github.event.inputs.mode == 'live' && steps.publisher.outputs.has_published == 'true'
+        if: (github.event_name == 'schedule' || github.event.inputs.mode == 'live') && steps.publisher.outputs.has_published == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/
 
   deploy-pages:
     needs: publish-and-build
-    if: github.event.inputs.mode == 'live' && needs.publish-and-build.outputs.has_published == 'true'
+    if: (github.event_name == 'schedule' || github.event.inputs.mode == 'live') && needs.publish-and-build.outputs.has_published == 'true'
     runs-on: ubuntu-latest
     permissions:
       pages: write
