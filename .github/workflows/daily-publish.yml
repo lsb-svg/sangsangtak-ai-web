@@ -2,7 +2,7 @@ name: Daily QA Auto Publisher (Simulation & Verification)
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Every day at 00:00 UTC (09:00 KST)
+    - cron: '17 21 * * *' # Every day at 21:17 UTC (06:17 KST next day)
   workflow_dispatch:
     inputs:
       mode:
