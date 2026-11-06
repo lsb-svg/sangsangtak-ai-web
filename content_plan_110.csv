@@ -23,8 +23,8 @@ C021,AI 장비추천,초보자는 탁구 라켓과 러버를 어떻게 고르나
 C022,AI 장비추천,드라이브 전형 탁구 동호인을 위한 추천 라켓과 러버 조합은?,AI 장비추천,gear-recommend-drive-combo,hold,P1,questions/gear-recommend-drive-combo.json,2026-08-28,015,,
 C023,AI 장비추천,탁구 입문 초보자를 위한 추천 완성형 라켓과 조합형 라켓 차이는?,AI 장비추천,gear-recommend-beginner-racket,live,P2,app_features.json (AI 장비추천),2026-09-01,022,2026-11-03,https://lsb-svg.github.io/sangsangtak-ai-web/questions/gear-recommend-beginner-racket.html
 C024,AI 장비추천,이너카본과 아우터카본 블레이드의 반발력 및 타구감 차이는?,AI 장비추천,gear-recommend-inner-vs-outer,live,P2,app_features.json (AI 장비추천),2026-09-01,035,2026-11-04,https://lsb-svg.github.io/sangsangtak-ai-web/questions/gear-recommend-inner-vs-outer.html
-C025,AI 장비추천,탁구 러버 경도(45도·47.5도·50도)는 어떻게 선택해야 하나요?,AI 장비추천,gear-recommend-rubber-hardness,planned,P2,app_features.json (AI 장비추천),2026-09-01,036,,
-C026,AI 장비추천,점착성 러버와 일반 하이텐션 러버의 스핀 및 비거리 차이는?,AI 장비추천,gear-recommend-tacky-vs-tension,planned,P2,app_features.json (AI 장비추천),2026-09-01,037,,
+C025,AI 장비추천,탁구 러버 경도(45도·47.5도·50도)는 어떻게 선택해야 하나요?,AI 장비추천,gear-recommend-rubber-hardness,planned,P2,app_features.json (AI 장비추천),2026-09-01,047,,
+C026,AI 장비추천,점착성 러버와 일반 하이텐션 러버의 스핀 및 비거리 차이는?,AI 장비추천,gear-recommend-tacky-vs-tension,planned,P2,app_features.json (AI 장비추천),2026-09-01,099,,
 C027,AI 장비추천,전진 속공 스매시 전형에 어울리는 블레이드와 러버 조합은?,AI 장비추천,gear-recommend-smash-drive-style,planned,P2,app_features.json (AI 장비추천),2026-09-01,038,,
 C028,AI 장비추천,펜홀더에서 셰이크핸드로 전향할 때 적응하기 쉬운 라켓 세팅은?,AI 장비추천,gear-recommend-penholder-to-shake,planned,P2,app_features.json (AI 장비추천),2026-09-01,039,,
 C029,AI 장비추천,손목 부담을 줄여주는 가벼운 탁구 라켓·러버 무게 조합 기준은?,AI 장비추천,gear-recommend-lightweight,planned,P2,app_features.json (AI 장비추천),2026-09-01,040,,
@@ -36,7 +36,7 @@ C034,AI 장비추천,셰이크핸드 FL 그립과 ST 그립의 형태 및 손 �
 C035,AI 장비추천,러버 클리너 사용법과 점착 보호필름 부착 관리 요령은?,AI 장비추천,gear-recommend-cleanser-adhesive-sheet,planned,P2,app_features.json (AI 장비추천),2026-09-01,046,,
 C036,배우기·기술 레슨,드라이브 공이 자꾸 테이블 밖으로 나가는 이유는?,배우기,drive-long,live,P0,content/questions/drive-long.json,2026-08-20,001,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/drive-long.html
 C037,배우기·기술 레슨,커트볼 드라이브가 네트에 걸리는 이유는?,배우기,drive-net,live,P0,content/questions/drive-net.json,2026-08-20,002,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/drive-net.html
-C038,배우기·기술 레슨,포핸드 롱 기본 스트로크의 올바른 폼과 체중 이동 방법은?,배우기,lesson-forehand-stroke-posture,ready,P2,app_features.json (배우기),2026-09-01,047,,
+C038,배우기·기술 레슨,탁구 포핸드 기본자세와 스윙은 어떻게 배울까?,배우기,lesson-forehand-stroke-posture,ready,P2,app_features.json (배우기),2026-09-01,036,,
 C039,배우기·기술 레슨,백핸드 쇼트에서 공이 뜨지 않고 깔끔하게 들어가는 타점은?,배우기,lesson-backhand-short-timing,planned,P2,app_features.json (배우기),2026-09-01,048,,
 C040,배우기·기술 레슨,하회전 볼을 안전하게 깎아 넘기는 보스커트(푸시) 요령은?,배우기,lesson-backspin-push-technique,planned,P2,app_features.json (배우기),2026-09-01,049,,
 C041,배우기·기술 레슨,탁구 서브에서 강한 하회전(백스핀)을 넣는 손목 스냅 원리는?,배우기,lesson-under-spin-serve-basics,planned,P2,app_features.json (배우기),2026-09-01,050,,
@@ -97,7 +97,7 @@ C095,국내·세계 랭킹,WTT 상위 대회 불참 시 부여되는 0점 페널
 C096,국내·세계 랭킹,전국 동호인 탁구 부수(1부~7부) 승급 기준과 포인트 누적 방식은?,랭킹,ranking-amateur-club-bu-system,planned,P2,app_features.json (랭킹),2026-09-01,098,,
 C097,탁구장·맞춤진단·앱 활용,가까운 탁구장은 어떻게 찾나요?,탁구장,find-club,live,P0,content/questions/find-club.json,2026-08-20,003,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/find-club.html
 C098,탁구장·맞춤진단·앱 활용,탁구 초보자에게 맞는 플레이 스타일과 전형은 어떻게 찾나요?,맞춤진단,diagnosis-playstyle,hold,P1,questions/diagnosis-playstyle.json,2026-08-20,021,,
-C099,탁구장·맞춤진단·앱 활용,내 주변 탁구장 찾을 때 샤워실·주차장·탁구대 수 확인하는 팁은?,탁구장,club-facilities-shower-parking,ready,P2,app_features.json (탁구장),2026-09-01,099,,
+C099,탁구장·맞춤진단·앱 활용,전국 탁구장은 어디서 찾을까? 지역별 탁구장 검색 방법,탁구장,find-club-nationwide,ready,P2,app_features.json (탁구장),2026-09-01,037,,
 C100,탁구장·맞춤진단·앱 활용,탁구장 일일 입장 시 지켜야 할 기본 에티켓과 전용 탁구화 착용 규정은?,탁구장,club-etiquette-rules,planned,P2,app_features.json (탁구장),2026-09-01,100,,
 C101,탁구장·맞춤진단·앱 활용,탁구장 바닥 탄성 마루와 국제 공인 탁구대(참피온/버터플라이) 차이점은?,탁구장,club-floor-mat-table-brand,planned,P2,app_features.json (탁구장),2026-09-01,101,,
 C102,탁구장·맞춤진단·앱 활용,혼자 탁구 연습할 때 탁구 로봇 머신기 활용법과 반복 훈련 효과는?,배우기,club-machine-robot-practice,planned,P2,app_features.json (탁구장),2026-09-01,102,,
