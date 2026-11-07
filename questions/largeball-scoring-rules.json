@@ -1,0 +1,21 @@
+{
+  "id": "largeball-scoring-rules",
+  "question": "라지볼 대회의 13점 게임 규정과 듀스 시 최대 15점 마감 규칙은?",
+  "category": "라지볼",
+  "app_session": "경기일정",
+  "feature_status": "released",
+  "source_type": "official_domestic_regulation",
+  "source_url": "https://ktta.sports.or.kr",
+  "verified_date": "2026-11-07",
+  "answer": "라지볼 탁구는 일반 탁구의 11점제와 달리 세트당 13점 선취 방식으로 진행되며, 12:12 듀스가 되더라도 계속 2점 차를 내야 하는 일반 경기와 달리 먼저 15점에 도달한 선수가 해당 세트를 승리하는 최대 15점 마감(Cap) 규칙을 공식 적용합니다.",
+  "steps": [
+    "13점 선취제 기본 원칙: 라지볼 공인 규정상 1세트는 기본적으로 13점을 먼저 득점하는 측이 승리합니다.",
+    "12:12 듀스 및 15점 캡: 듀스가 발생하면 2점 차가 날 때까지 진행하되, 점수가 14:14가 될 경우 마지막 1점을 먼저 낸 선수가 15:14로 경기를 끝냅니다.",
+    "서브 교대 방식: 일반 탁구와 마찬가지로 2점마다 서브권을 교대하며, 듀스 이후에는 1점마다 서브권을 번갈아 갖습니다.",
+    "상상탁구 AI 앱 활용: 상상탁구 AI 앱의 '경기일정' 및 라지볼 안내 정보를 통해 라지볼 대회의 최신 규정과 진행 방식을 확인해 보세요. (Android 및 iPhone 지원)"
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "대한탁구협회(KTTA) 라지볼 경기 규정 기준(확인일: 2026-11-07). 세부 로컬 대회별 핸디 적용 규정은 주최 요강 확인 필요."
+}

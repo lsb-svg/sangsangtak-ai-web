@@ -1,0 +1,21 @@
+{
+  "id": "lesson-backhand-short-timing",
+  "question": "백핸드 쇼트에서 공이 뜨지 않고 깔끔하게 들어가는 타점은?",
+  "category": "일반 탁구 및 기술",
+  "app_session": "배우기",
+  "feature_status": "released",
+  "source_type": "app_curation_database",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-11-07",
+  "answer": "백핸드 쇼트에서 공이 뜨지 않고 깔끔하게 상대 테이블로 들어가기 위해서는, 바운드 후 정점에 도달하기 직전의 상승기(라이징) 또는 정점 타점을 포착하고 라켓면을 살짝 숙인 채 몸의 중심 앞에서 간결하게 밀어주는 것이 핵심입니다.",
+  "steps": [
+    "상승기 타점 포착: 공이 정점을 지나 떨어질 때 치면 공이 뜨거나 밀리기 쉬우므로, 바운드 직후 떠오르는 상승기나 정점 타이밍에 맞춥니다.",
+    "라켓 각도와 팔꿈치 지점: 라켓면을 테이블과 약 75~80도로 살짝 닫고, 팔꿈치를 몸통 앞에 안정적으로 고정한 뒤 전완으로 부드럽게 밀어냅니다.",
+    "체중 이동과 몸의 균형: 무릎을 가볍게 굽힌 기마 자세에서 상체를 공의 정면에 맞추고, 임팩트 순간 가볍게 앞으로 무게중심을 실어줍니다.",
+    "상상탁구 AI 앱 활용: 상상탁구 AI 앱의 '배우기' 메뉴에서 백핸드 쇼트 타점 및 기본 블록 가이드를 확인하며 기본기를 점검해 보세요. (Android 및 iPhone 지원)"
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI 앱 '배우기' 백핸드 기본기 레슨 데이터셋 기준(확인일: 2026-11-07). 타점 타이밍 및 라켓 앵글 제어 메커니즘 정리."
+}

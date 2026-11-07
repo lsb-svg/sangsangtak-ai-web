@@ -1,0 +1,21 @@
+{
+  "id": "ranking-ittf-point-validity-period",
+  "question": "ITTF 세계 랭킹 포인트의 유효기간(12개월)과 성적 반영 규정은?",
+  "category": "세계·국내 탁구 랭킹",
+  "app_session": "랭킹",
+  "feature_status": "released",
+  "source_type": "official_international_regulation",
+  "source_url": "https://www.ittf.com/rankings/",
+  "verified_date": "2026-11-07",
+  "answer": "ITTF 및 WTT 세계 랭킹 시스템은 선수가 획득한 각 대회의 랭킹 포인트를 12개월(52주) 동안 유효하게 유지하는 롤링(Rolling) 방식을 적용하며, 성인 단식 기준 최근 1년간 참가한 대회 중 가장 높은 성적을 거둔 상위 8개 대회의 포인트만을 합산하여 순위를 결정합니다.",
+  "steps": [
+    "52주 롤링 유효기간: 대회가 종료된 주간부터 정확히 1년(52주)이 지나면 해당 대회에서 얻은 포인트는 시스템에서 자동으로 소멸됩니다.",
+    "상위 8개 대회(Best 8) 합산: 선수가 1년에 10개 이상의 국제 대회에 출전하더라도, 획득 포인트가 가장 높은 상위 8개 대회의 점수만 랭킹 산정에 반영됩니다.",
+    "올림픽·세계선수권 연계: WTT 그랜드 스매시(우승 2000점), 챔피언스(우승 1000점) 등 메이저 대회 성적이 랭킹 유지 및 올림픽 시드 배정에 직접적인 영향을 미칩니다.",
+    "상상탁구 AI 앱 활용: 상상탁구 AI 앱의 '랭킹' 메뉴에서 국내외 주요 스타 선수들의 세계 랭킹 순위 정보를 실시간으로 확인해 보세요. (Android 및 iPhone 지원)"
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "ITTF 및 WTT 세계 랭킹 규정집(Table Tennis World Ranking Regulations) 기준(확인일: 2026-11-07). 최근 52주 Best 8 롤링 집계 기준."
+}
