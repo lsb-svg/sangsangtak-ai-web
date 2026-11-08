@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Zero-dependency static builder. Does not generate new articles or fact-check regulations."""
 from pathlib import Path
-import os, json, html, re, shutil, xml.etree.ElementTree as ET
+import os, json, html, re, shutil, csv, xml.etree.ElementTree as ET
 from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parent
@@ -110,7 +110,7 @@ def build_app_features_section():
         (
             '📍',
             '전국 탁구장 찾기',
-            '내 위치 주변 가까운 탁구장의 위치, 탁구대 수, 샤워실 등 편의시설과 운영시간 정보를 빠르게 안내합니다.',
+            '가까운 탁구장의 기본 위치 정보와 등록 목록을 검색할 수 있으며, 운영시간과 세부 시설은 방문 전 직접 확인하는 것이 좋습니다.',
             'live',
             '정식 서비스 중',
             False
@@ -207,13 +207,28 @@ def build():
     # Check for duplicates across all question candidates
     check_duplicates(all_questions)
 
+    # Load plan CSV to enforce content_status == 'live' for public distribution
+    plan_csv_path = ROOT / 'content_plan_110.csv'
+    live_slugs = set()
+    if plan_csv_path.exists():
+        with open(plan_csv_path, 'r', encoding='utf-8-sig') as f:
+            for r in csv.DictReader(f):
+                if r.get('content_status') == 'live' and r.get('slug'):
+                    live_slugs.add(r['slug'])
+
     qa_cards=[]
     qa_items=[]
     hold_count=0
     approved_categories=set()
     for data in all_questions:
-        # Hold questions are completely excluded from dist HTML, home card list, and search index
-        if data['review_status']!='reviewed':
+        qid = data['id']
+        # Deployable questions MUST meet all 4 conditions:
+        # 1. JSON review_status == 'reviewed'
+        # 2. CSV content_status == 'live'
+        # 3. JSON slug matches CSV live slug
+        # 4. Mandatory content schema validated
+        # All ready, planned, hold, editorial_review_required or unlisted questions are strictly excluded.
+        if data['review_status'] != 'reviewed' or qid not in live_slugs:
             hold_count+=1
             continue
         approved_categories.add(data['category'])

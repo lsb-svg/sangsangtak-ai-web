@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 import xml.etree.ElementTree as ET
 import json
 import re
+import csv
 
 root = Path(__file__).resolve().parent
 cfg = json.loads((root / 'config.json').read_text(encoding='utf-8'))
@@ -44,6 +45,14 @@ assert app_cfg['features']['ranking']['status'] == 'released', "Ranking menu mus
 assert app_cfg['features']['diagnosis']['status'] == 'released', "Diagnosis menu must be recognized as existing in live app"
 
 # 2. Verify all questions data integrity and duplicate prevention
+plan_csv_path = root / 'content_plan_110.csv'
+live_slugs = set()
+if plan_csv_path.exists():
+    with open(plan_csv_path, 'r', encoding='utf-8-sig') as f:
+        for r in csv.DictReader(f):
+            if r.get('content_status') == 'live' and r.get('slug'):
+                live_slugs.add(r['slug'])
+
 qas = list((root / 'questions').glob('*.json'))
 assert len(qas) >= 12, f"Expected at least 12 question candidate files, got {len(qas)}"
 
@@ -78,7 +87,8 @@ for f in qas:
     assert obj['feature_status'] in ('released', 'upcoming', 'beta')
     assert obj['review_status'] in ('editorial_review_required', 'reviewed')
     
-    if obj['review_status'] == 'reviewed':
+    # Live deployed questions must be reviewed AND live in CSV
+    if obj['review_status'] == 'reviewed' and qid in live_slugs:
         reviewed_qas.append(qid)
     else:
         hold_qas.append(qid)

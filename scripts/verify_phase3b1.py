@@ -5,12 +5,21 @@ Phase 3B-1 Comprehensive Content Integrity and Policy Verification
 from pathlib import Path
 import json
 import re
+import csv
 
 ROOT = Path(__file__).resolve().parent.parent
 QUESTIONS_DIR = ROOT / "questions"
 DIST = ROOT / "dist"
 
 def verify_all():
+    plan_csv_path = ROOT / "content_plan_110.csv"
+    live_slugs = set()
+    if plan_csv_path.exists():
+        with open(plan_csv_path, "r", encoding="utf-8-sig") as f:
+            for r in csv.DictReader(f):
+                if r.get("content_status") == "live" and r.get("slug"):
+                    live_slugs.add(r["slug"])
+
     q_files = list(QUESTIONS_DIR.glob("*.json"))
     print(f"Total question JSON files: {len(q_files)}")
 
@@ -31,14 +40,16 @@ def verify_all():
 
         categories_found.add(cat)
 
-        if status == "reviewed":
+        is_live = (status == "reviewed") and (qid in live_slugs)
+
+        if is_live:
             approved_count += 1
-            # Approved files must have corresponding dist HTML
+            # Approved live files must have corresponding dist HTML
             assert (DIST / "questions" / f"{qid}.html").exists(), f"Approved {qid} missing in dist"
         else:
             hold_count += 1
-            # Hold files must NOT have corresponding dist HTML
-            assert not (DIST / "questions" / f"{qid}.html").exists(), f"Hold {qid} leaked to dist!"
+            # Hold/ready files must NOT have corresponding dist HTML
+            assert not (DIST / "questions" / f"{qid}.html").exists(), f"Hold/ready {qid} leaked to dist!"
 
         # Policy checks
         if "amateur-gear" in qid:
@@ -60,10 +71,10 @@ def verify_all():
     for qf in q_files:
         obj = json.loads(qf.read_text(encoding="utf-8"))
         qid = obj["id"]
-        if obj["review_status"] == "editorial_review_required":
-            assert f"questions/{qid}.html" not in sitemap_text, f"Hold {qid} found in sitemap!"
-        else:
+        if (obj["review_status"] == "reviewed") and (qid in live_slugs):
             assert f"questions/{qid}.html" in sitemap_text, f"Approved {qid} missing from sitemap!"
+        else:
+            assert f"questions/{qid}.html" not in sitemap_text, f"Unreleased {qid} found in sitemap!"
 
     print("ALL POLICY VERIFICATIONS PASSED:")
     print(f" - Approved (Live HTML & Sitemap): {approved_count} QAs")
