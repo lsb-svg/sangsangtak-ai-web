@@ -97,7 +97,7 @@ C095,국내·세계 랭킹,WTT 상위 대회 불참 시 부여되는 0점 페널
 C096,국내·세계 랭킹,전국 동호인 탁구 부수(1부~7부) 승급 기준과 포인트 누적 방식은?,랭킹,ranking-amateur-club-bu-system,planned,P2,app_features.json (랭킹),2026-09-01,098,,
 C097,탁구장·맞춤진단·앱 활용,가까운 탁구장은 어떻게 찾나요?,탁구장,find-club,live,P0,content/questions/find-club.json,2026-08-20,003,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/find-club.html
 C098,탁구장·맞춤진단·앱 활용,탁구 초보자에게 맞는 플레이 스타일과 전형은 어떻게 찾나요?,맞춤진단,diagnosis-playstyle,hold,P1,questions/diagnosis-playstyle.json,2026-08-20,021,,
-C099,탁구장·맞춤진단·앱 활용,전국 탁구장은 어디서 찾을까? 지역별 탁구장 검색 방법,탁구장,find-club-nationwide,ready,P2,app_features.json (탁구장),2026-09-01,037,,
+C099,탁구장·맞춤진단·앱 활용,전국 탁구장은 어디서 찾을까? 지역별 탁구장 검색 방법,탁구장,find-club-nationwide,live,P2,app_features.json (탁구장),2026-09-01,037,2026-11-08,https://lsb-svg.github.io/sangsangtak-ai-web/questions/find-club-nationwide.html
 C100,탁구장·맞춤진단·앱 활용,탁구장 일일 입장 시 지켜야 할 기본 에티켓과 전용 탁구화 착용 규정은?,탁구장,club-etiquette-rules,planned,P2,app_features.json (탁구장),2026-09-01,100,,
 C101,탁구장·맞춤진단·앱 활용,탁구장 바닥 탄성 마루와 국제 공인 탁구대(참피온/버터플라이) 차이점은?,탁구장,club-floor-mat-table-brand,planned,P2,app_features.json (탁구장),2026-09-01,101,,
 C102,탁구장·맞춤진단·앱 활용,혼자 탁구 연습할 때 탁구 로봇 머신기 활용법과 반복 훈련 효과는?,배우기,club-machine-robot-practice,planned,P2,app_features.json (탁구장),2026-09-01,102,,
