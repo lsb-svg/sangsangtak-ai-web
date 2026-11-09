@@ -37,7 +37,7 @@ C035,AI 장비추천,러버 클리너 사용법과 점착 보호필름 부착 �
 C036,배우기·기술 레슨,드라이브 공이 자꾸 테이블 밖으로 나가는 이유는?,배우기,drive-long,live,P0,content/questions/drive-long.json,2026-08-20,001,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/drive-long.html
 C037,배우기·기술 레슨,커트볼 드라이브가 네트에 걸리는 이유는?,배우기,drive-net,live,P0,content/questions/drive-net.json,2026-08-20,002,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/drive-net.html
 C038,배우기·기술 레슨,탁구 포핸드 기본자세와 스윙은 어떻게 배울까?,배우기,lesson-forehand-stroke-posture,live,P2,app_features.json (배우기),2026-09-01,036,2026-11-07,https://lsb-svg.github.io/sangsangtak-ai-web/questions/lesson-forehand-stroke-posture.html
-C039,배우기·기술 레슨,백핸드 쇼트에서 공이 뜨지 않고 깔끔하게 들어가는 타점은?,배우기,lesson-backhand-short-timing,ready,P2,app_features.json (배우기),2026-09-01,038,,
+C039,배우기·기술 레슨,백핸드 쇼트에서 공이 뜨지 않고 깔끔하게 들어가는 타점은?,배우기,lesson-backhand-short-timing,live,P2,app_features.json (배우기),2026-09-01,038,2026-11-09,https://lsb-svg.github.io/sangsangtak-ai-web/questions/lesson-backhand-short-timing.html
 C040,배우기·기술 레슨,하회전 볼을 안전하게 깎아 넘기는 보스커트(푸시) 요령은?,배우기,lesson-backspin-push-technique,planned,P2,app_features.json (배우기),2026-09-01,049,,
 C041,배우기·기술 레슨,탁구 서브에서 강한 하회전(백스핀)을 넣는 손목 스냅 원리는?,배우기,lesson-under-spin-serve-basics,planned,P2,app_features.json (배우기),2026-09-01,050,,
 C042,배우기·기술 레슨,포핸드 드라이브 시 공을 두텁게 긁어 스핀을 높이는 방법은?,배우기,lesson-topspin-forehand-drive,planned,P2,app_features.json (배우기),2026-09-01,051,,
