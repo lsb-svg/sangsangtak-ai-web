@@ -23,7 +23,7 @@ C021,AI 장비추천,초보자는 탁구 라켓과 러버를 어떻게 고르나
 C022,AI 장비추천,드라이브 전형 탁구 동호인을 위한 추천 라켓과 러버 조합은?,AI 장비추천,gear-recommend-drive-combo,hold,P1,questions/gear-recommend-drive-combo.json,2026-08-28,015,,
 C023,AI 장비추천,탁구 입문 초보자를 위한 추천 완성형 라켓과 조합형 라켓 차이는?,AI 장비추천,gear-recommend-beginner-racket,live,P2,app_features.json (AI 장비추천),2026-09-01,022,2026-11-03,https://lsb-svg.github.io/sangsangtak-ai-web/questions/gear-recommend-beginner-racket.html
 C024,AI 장비추천,이너카본과 아우터카본 블레이드의 반발력 및 타구감 차이는?,AI 장비추천,gear-recommend-inner-vs-outer,live,P2,app_features.json (AI 장비추천),2026-09-01,035,2026-11-04,https://lsb-svg.github.io/sangsangtak-ai-web/questions/gear-recommend-inner-vs-outer.html
-C025,AI 장비추천,탁구 러버 경도(45도·47.5도·50도)는 어떻게 선택해야 하나요?,AI 장비추천,gear-recommend-rubber-hardness,ready,P2,app_features.json (AI 장비추천),2026-09-01,039,,
+C025,AI 장비추천,탁구 러버 경도(45도·47.5도·50도)는 어떻게 선택해야 하나요?,AI 장비추천,gear-recommend-rubber-hardness,live,P2,app_features.json (AI 장비추천),2026-09-01,039,2026-11-10,https://lsb-svg.github.io/sangsangtak-ai-web/questions/gear-recommend-rubber-hardness.html
 C026,AI 장비추천,점착성 러버와 일반 하이텐션 러버의 스핀 및 비거리 차이는?,AI 장비추천,gear-recommend-tacky-vs-tension,planned,P2,app_features.json (AI 장비추천),2026-09-01,099,,
 C027,AI 장비추천,전진 속공 스매시 전형에 어울리는 블레이드와 러버 조합은?,AI 장비추천,gear-recommend-smash-drive-style,planned,P2,app_features.json (AI 장비추천),2026-09-01,048,,
 C028,AI 장비추천,펜홀더에서 셰이크핸드로 전향할 때 적응하기 쉬운 라켓 세팅은?,AI 장비추천,gear-recommend-penholder-to-shake,planned,P2,app_features.json (AI 장비추천),2026-09-01,047,,
