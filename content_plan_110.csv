@@ -68,7 +68,7 @@ C066,라지볼,라지볼 경기 규정에서 일반 탁구보다 높은 네트(1
 C067,라지볼,라지볼 서브 시 강한 회전 제한 규정과 엔드라인 서비스 원칙은?,AI 장비추천,largeball-service-rotation-rule,planned,P2,app_features.json (라지볼),2026-09-01,072,,
 C068,라지볼,라지볼에서 가벼운 반발력을 얻기 위한 전용 블레이드 추천 기준은?,AI 장비추천,largeball-racket-blade-selection,planned,P2,app_features.json (라지볼),2026-09-01,073,,
 C069,라지볼,라지볼 전용 공인 러버(표면 돌기 숏핌플)의 종류와 선택 방법은?,AI 장비추천,largeball-pimples-out-rubber-types,planned,P2,app_features.json (라지볼),2026-09-01,074,,
-C070,라지볼,라지볼 탁구는 몇 점까지 경기할까? 대회별 점수·듀스 규정 확인 방법,AI 장비추천,largeball-scoring-rules,ready,P2,app_features.json (라지볼),2026-09-01,041,,
+C070,라지볼,라지볼 탁구는 몇 점까지 경기할까? 대회별 점수·듀스 규정 확인 방법,AI 장비추천,largeball-scoring-rules,live,P2,app_features.json (라지볼),2026-09-01,041,2026-11-12,https://lsb-svg.github.io/sangsangtak-ai-web/questions/largeball-scoring-rules.html
 C071,라지볼,전국 라지볼 탁구대회의 연령대별 부수(60대·70대·80대) 참가 기준은?,경기일정,largeball-senior-division-classes,planned,P2,app_features.json (라지볼),2026-09-01,076,,
 C072,라지볼,라지볼 경기에서 스매시보다 랠리 안정성과 코스 배분이 중요한 이유는?,배우기,largeball-gameplay-tactics,planned,P2,app_features.json (라지볼),2026-09-01,077,,
 C073,라지볼,시니어와 어르신들의 관절 부담을 줄여주는 라지볼 유산소 운동 효과는?,맞춤진단,largeball-health-benefits-seniors,planned,P2,app_features.json (라지볼),2026-09-01,078,,
