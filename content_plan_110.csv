@@ -74,7 +74,7 @@ C072,라지볼,라지볼 경기에서 스매시보다 랠리 안정성과 코스
 C073,라지볼,시니어와 어르신들의 관절 부담을 줄여주는 라지볼 유산소 운동 효과는?,맞춤진단,largeball-health-benefits-seniors,planned,P2,app_features.json (라지볼),2026-09-01,078,,
 C074,라지볼,대한탁구협회 공인 전국 라지볼 페스티벌 일정과 대회 접수처는?,경기일정,largeball-national-tournaments,planned,P2,app_features.json (라지볼),2026-09-01,079,,
 C075,장애인 탁구,장애인 탁구의 클래스 1~11은 무슨 뜻인가요?,경기일정,para-classes,live,P0,content/questions/para-classes.json,2026-08-20,004,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/para-classes.html
-C076,장애인 탁구,휠체어 탁구(클래스 1~5) 선수의 시합 특성과 경기 진행 규칙은?,경기일정,para-wheelchair-rules-class1-5,ready,P2,app_features.json (장애인 탁구),2026-09-01,042,,
+C076,장애인 탁구,휠체어 탁구(클래스 1~5) 선수의 시합 특성과 경기 진행 규칙은?,경기일정,para-wheelchair-rules-class1-5,live,P2,app_features.json (장애인 탁구),2026-09-01,042,2026-11-13,https://lsb-svg.github.io/sangsangtak-ai-web/questions/para-wheelchair-rules-class1-5.html
 C077,장애인 탁구,스탠딩 지체장애(클래스 6~10) 선수의 경기 방식과 신체 기능 기준은?,경기일정,para-standing-rules-class6-10,planned,P2,app_features.json (장애인 탁구),2026-09-01,081,,
 C078,장애인 탁구,지적장애 탁구 선수들이 출전하는 클래스 11의 경기 규정은?,경기일정,para-intellectual-class11,planned,P2,app_features.json (장애인 탁구),2026-09-01,082,,
 C079,장애인 탁구,휠체어 탁구 서브에서 공이 네트 맞고 넘어가거나 옆으로 나갈 때 규칙은?,경기일정,para-wheelchair-service-net-rule,planned,P2,app_features.json (장애인 탁구),2026-09-01,083,,
