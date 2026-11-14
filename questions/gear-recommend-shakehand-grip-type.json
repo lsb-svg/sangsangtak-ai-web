@@ -1,0 +1,21 @@
+{
+  "id": "gear-recommend-shakehand-grip-type",
+  "question": "셰이크핸드 FL 그립과 ST 그립의 형태 및 손 크기별 선택법은?",
+  "category": "라켓·러버 및 AI 장비추천",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "table_tennis_coaching_and_equipment_guide",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-11-14",
+  "answer": "셰이크핸드 라켓의 그립 형태는 손잡이 끝부분이 나팔꽃처럼 넓어지는 FL(Flared) 그립과 손잡이 전체 굵기가 일정한 직선형 ST(Straight) 그립이 대표적이며, 악력 고정과 강한 원거리 포핸드 스윙을 선호하면 FL을, 그립 전환의 유연성과 정교한 백핸드·각도 조절을 중시하면 ST를 선택하는 것이 표준적입니다.",
+  "steps": [
+    "FL(Flared) 그립 특성 파악: 손잡이 중간이 약간 오목하고 끝부분이 퍼진 유선형 구조로 손안에서 라켓이 빠지지 않고 단단히 고정되어, 손목 흔들림을 줄이고 일관된 포핸드 드라이브 스윙을 구사하기에 유리합니다.",
+    "ST(Straight) 그립 특성 파악: 헤드부터 끝부분까지 두께가 균일한 일자형 구조로, 포핸드와 백핸드 전환 시 그립의 미세한 쥐는 각도 변화와 백핸드 대상 플레이 및 쇼트 블록을 자유롭게 변경하기에 수월합니다.",
+    "손 크기와 플레이 성향 매칭: 손이 다소 작거나 라켓을 안정적으로 꽉 쥐고 휘두르는 동호인에게는 FL 그립이 대중적이며, 손이 크거나 랠리 중 라켓 각도를 미세하게 돌려 잡는 테크니션에게는 ST 그립이 선호됩니다.",
+    "상상탁구 AI 앱 활용: 상상탁구 AI 앱의 'AI 장비추천' 메뉴에서 나의 전형과 손 크기, 플레이 성향에 적합한 블레이드 규격과 최적 장비 매칭을 편리하게 탐색해 보세요. (Android 및 iPhone 지원)"
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "탁구 라켓 그립 규격 및 전형별 선택 가이드 기준(확인일: 2026-11-14). 개인 손 형태와 쥐는 습관에 따라 체감이 달라질 수 있으므로 구매 전 시타나 실물 파지 권장."
+}

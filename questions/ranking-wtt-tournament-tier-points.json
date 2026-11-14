@@ -1,0 +1,21 @@
+{
+  "id": "ranking-wtt-tournament-tier-points",
+  "question": "WTT 그랜드스매시·챔피언스·컨텐더 등급별 우승 랭킹 포인트 비교는?",
+  "category": "세계·국내 탁구 랭킹",
+  "app_session": "랭킹",
+  "feature_status": "released",
+  "source_type": "ittf_and_wtt_table_tennis_world_ranking_regulations",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-11-14",
+  "answer": "세계탁구연맹(ITTF) 및 WTT 공식 랭킹 시스템에서 대회 등급별 단식 우승자에게 부여되는 세계랭킹 포인트는 올림픽·세계선수권 및 WTT 그랜드스매시가 2,000점, WTT 파이널스가 1,500점, WTT 챔피언스가 1,000점, WTT 스타컨텐더가 600점, WTT 컨텐더가 400점, WTT 피더가 125점으로 규격화되어 있습니다.",
+  "steps": [
+    "최상위 메이저 티어(2,000점 / 1,500점): 4대 메이저에 해당하는 WTT 싱가포르·사우디·차이나 등 그랜드스매시 우승 시 2,000점이 부여되며, 연말 상위 랭커 16명이 출전하는 WTT 파이널스는 우승 시 1,500점이 반영됩니다.",
+    "상위 정예 티어(1,000점 / 600점): 세계 랭킹 상위 32명이 단식으로 맞붙는 WTT 챔피언스는 우승 1,000점, 중상위권 톱랭커와 유망주가 참가하는 WTT 스타컨텐더는 우승 600점이 주어집니다.",
+    "투어 및 입문 티어(400점 / 125점): 정규 투어인 WTT 컨텐더는 우승 400점, 랭킹 진입 및 하위 랭커 순위 상승의 발판이 되는 WTT 피더 시리즈는 우승 시 125점의 공식 랭킹 포인트를 획득합니다.",
+    "상상탁구 AI 앱 활용: 상상탁구 AI 앱의 '랭킹' 메뉴에 접속하여 국내외 스타 선수들의 최신 세계 랭킹 순위와 포인트 정보를 한눈에 간편하게 확인해 보세요. (Android 및 iPhone 지원)"
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "ITTF 및 World Table Tennis(WTT) 공식 세계랭킹 규정집 배점 기준(확인일: 2026-11-14). 획득한 포인트는 52주간 유효하며 상위 8개 대회 합산 방식 적용."
+}
