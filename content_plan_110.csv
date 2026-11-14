@@ -48,7 +48,7 @@ C046,배우기·기술 레슨,현대 탁구 필수 리시브 기술 치키타의
 C047,배우기·기술 레슨,상대방의 강한 회전 드라이브를 라켓 각도로 흡수하는 블록법은?,배우기,lesson-block-power-drive,planned,P2,app_features.json (배우기),2026-09-01,056,,
 C048,전국 탁구대회,전국 탁구대회 일정은 어디에서 확인하나요?,경기일정,tournament-check,live,P0,content/questions/tournament-check.json,2026-08-20,006,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/tournament-check.html
 C049,전국 탁구대회,생활체육 탁구대회 참가 신청 시 확인할 핵심 사항은 무엇인가요?,경기일정,tournament-registration-guide,hold,P1,questions/tournament-registration-guide.json,2026-08-25,016,,
-C050,전국 탁구대회,대한탁구협회 디비전 리그 T1~T7 리그 등급 체계와 승강제 방식은?,경기일정,tournament-division-system-t1-t7,ready,P2,app_features.json (경기일정),2026-09-01,057,,
+C050,전국 탁구대회,지역별 탁구대회 일정은 어디서 확인하나요?,경기일정,tournament-division-system-t1-t7,ready,P2,app_features.json (경기일정),2026-09-01,057,,
 C051,전국 탁구대회,생활체육 탁구대회 부수별 핸디 점수(1+1+1 점수차) 계산 기준은?,경기일정,tournament-amateur-handicap-rule,planned,P2,app_features.json (경기일정),2026-09-01,058,,
 C052,전국 탁구대회,대회 공인구(ABS 40+ 3스타 공인구) 규격과 제조사별 타구감 차이는?,경기일정,tournament-official-ball-selection,live,P2,app_features.json (경기일정),2026-09-01,040,2026-11-11,https://lsb-svg.github.io/sangsangtak-ai-web/questions/tournament-official-ball-selection.html
 C053,전국 탁구대회,생활체육 전국 오픈대회에서 사용 가능한 ITTF 공인 러버 확인법은?,경기일정,tournament-ittf-authorized-rubber,planned,P2,app_features.json (경기일정),2026-09-01,060,,
