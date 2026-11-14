@@ -85,7 +85,7 @@ C083,장애인 탁구,대한장애인탁구협회 공식 국내 대회 및 전�
 C084,장애인 탁구,장애인 탁구 선수가 시합에 나가기 위해 받는 등급분류(선수등록) 심사는?,경기일정,para-classification-process,planned,P2,app_features.json (장애인 탁구),2026-09-01,088,,
 C085,국내·세계 랭킹,대한탁구협회 디비전 리그 랭킹과 동호인 부수 체계는 어떻게 되나요?,랭킹,domestic-division-ranking,hold,P1,questions/domestic-division-ranking.json,2026-08-20,019,,
 C086,국내·세계 랭킹,세계 탁구 랭킹(ITTF/WTT)은 어떻게 산정되나요?,랭킹,world-ranking-system,hold,P1,questions/world-ranking-system.json,2026-08-20,020,,
-C087,국내·세계 랭킹,ITTF 세계 랭킹 포인트의 유효기간(12개월)과 성적 반영 규정은?,랭킹,ranking-ittf-point-validity-period,ready,P2,app_features.json (랭킹),2026-09-01,043,,
+C087,국내·세계 랭킹,ITTF 세계 랭킹 포인트의 유효기간(12개월)과 성적 반영 규정은?,랭킹,ranking-ittf-point-validity-period,live,P2,app_features.json (랭킹),2026-09-01,043,2026-11-14,https://lsb-svg.github.io/sangsangtak-ai-web/questions/ranking-ittf-point-validity-period.html
 C088,국내·세계 랭킹,WTT 그랜드스매시·챔피언스·컨텐더 등급별 우승 랭킹 포인트 비교는?,랭킹,ranking-wtt-tournament-tier-points,planned,P2,app_features.json (랭킹),2026-09-01,090,,
 C089,국내·세계 랭킹,올림픽 탁구 단식 및 단체전 시드 배정에 반영되는 세계 랭킹 기준은?,랭킹,ranking-olympic-seed-criteria,planned,P2,app_features.json (랭킹),2026-09-01,091,,
 C090,국내·세계 랭킹,대한탁구협회 국가대표 최종 선발전 출전 자격과 랭킹 배점은?,랭킹,ranking-ktta-national-squad-selection,planned,P2,app_features.json (랭킹),2026-09-01,092,,
