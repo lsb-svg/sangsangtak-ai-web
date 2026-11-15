@@ -102,7 +102,7 @@ C100,탁구장·맞춤진단·앱 활용,탁구장 일일 입장 시 지켜야 �
 C101,탁구장·맞춤진단·앱 활용,탁구장 바닥 탄성 마루와 국제 공인 탁구대(참피온/버터플라이) 차이점은?,탁구장,club-floor-mat-table-brand,planned,P2,app_features.json (탁구장),2026-09-01,101,,
 C102,탁구장·맞춤진단·앱 활용,혼자 탁구 연습할 때 탁구 로봇 머신기 활용법과 반복 훈련 효과는?,배우기,club-machine-robot-practice,planned,P2,app_features.json (탁구장),2026-09-01,102,,
 C103,탁구장·맞춤진단·앱 활용,일반 탁구장 월 회비와 1:1 개인 레슨비 평균 시세 및 선택 기준은?,탁구장,club-lesson-monthly-fee-guide,planned,P2,app_features.json (탁구장),2026-09-01,103,,
-C104,탁구장·맞춤진단·앱 활용,상상탁구 AI 맞춤진단으로 내 스타일에 맞는 러버를 진단하는 원리는?,맞춤진단,diagnosis-rubber-combination-test,ready,P2,app_features.json (맞춤진단),2026-09-01,044,,
+C104,탁구장·맞춤진단·앱 활용,상상탁구 AI 맞춤진단으로 내 스타일에 맞는 러버를 진단하는 원리는?,맞춤진단,diagnosis-rubber-combination-test,live,P2,app_features.json (맞춤진단),2026-09-01,044,2026-11-15,https://lsb-svg.github.io/sangsangtak-ai-web/questions/diagnosis-rubber-combination-test.html
 C105,탁구장·맞춤진단·앱 활용,입문자를 위한 맞춤진단: 셰이크핸드와 중국식 펜홀더(중펜) 선택 기준은?,맞춤진단,diagnosis-shake-vs-penholder,planned,P2,app_features.json (맞춤진단),2026-09-01,105,,
 C106,탁구장·맞춤진단·앱 활용,플레이 스타일에 따른 성향 진단: 스피드 파워 공격형 vs 회전 컨트롤형은?,맞춤진단,diagnosis-grip-power-control,planned,P2,app_features.json (맞춤진단),2026-09-01,106,,
 C107,탁구장·맞춤진단·앱 활용,동호인 경기 체력과 움직임 범위를 자가 진단하는 맞춤 팁은?,맞춤진단,diagnosis-footwork-stamina,planned,P2,app_features.json (맞춤진단),2026-09-01,107,,
