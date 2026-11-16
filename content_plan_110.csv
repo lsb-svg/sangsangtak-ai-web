@@ -32,7 +32,7 @@ C030,AI 장비추천,백핸드 쇼트와 안정적인 블록을 위한 추천 �
 C031,AI 장비추천,탁구 러버의 수명 주기와 교체 시기를 판별하는 기준은?,AI 장비추천,gear-recommend-rubber-replacement-cycle,planned,P2,app_features.json (AI 장비추천),2026-09-01,080,,
 C032,AI 장비추천,10만원대 예산으로 맞출 수 있는 가성비 탁구 라켓·러버 추천은?,AI 장비추천,gear-recommend-budget-100k,planned,P2,app_features.json (AI 장비추천),2026-09-01,089,,
 C033,AI 장비추천,순수 5겹 합판 라켓과 카본 특수소재 라켓의 장단점 비교는?,AI 장비추천,gear-recommend-wood-vs-carbon,planned,P2,app_features.json (AI 장비추천),2026-09-01,104,,
-C034,AI 장비추천,셰이크핸드 FL 그립과 ST 그립의 형태 및 손 크기별 선택법은?,AI 장비추천,gear-recommend-shakehand-grip-type,ready,P2,app_features.json (AI 장비추천),2026-09-01,045,,
+C034,AI 장비추천,셰이크핸드 FL 그립과 ST 그립의 형태 및 손 크기별 선택법은?,AI 장비추천,gear-recommend-shakehand-grip-type,live,P2,app_features.json (AI 장비추천),2026-09-01,045,2026-11-16,https://lsb-svg.github.io/sangsangtak-ai-web/questions/gear-recommend-shakehand-grip-type.html
 C035,AI 장비추천,러버 클리너 사용법과 점착 보호필름 부착 관리 요령은?,AI 장비추천,gear-recommend-cleanser-adhesive-sheet,planned,P2,app_features.json (AI 장비추천),2026-09-01,046,,
 C036,배우기·기술 레슨,드라이브 공이 자꾸 테이블 밖으로 나가는 이유는?,배우기,drive-long,live,P0,content/questions/drive-long.json,2026-08-20,001,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/drive-long.html
 C037,배우기·기술 레슨,커트볼 드라이브가 네트에 걸리는 이유는?,배우기,drive-net,live,P0,content/questions/drive-net.json,2026-08-20,002,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/drive-net.html
