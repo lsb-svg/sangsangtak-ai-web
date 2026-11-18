@@ -5,7 +5,7 @@
   "app_session": "AI 장비추천",
   "feature_status": "released",
   "source_type": "official_largeball_equipment_rules",
-  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "source_url": "https://equipment.ittf.com/",
   "verified_date": "2026-11-18",
   "answer": "라지볼 탁구에서는 일반 탁구의 평면(평러버) 러버 사용이 금지되며, 오직 표면에 돌기가 밖으로 나와 있는 공인 숏핌플(돌출) 러버만을 사용해야 합니다. 라지볼 전용 숏핌플 러버는 직경 44mm 볼의 반발력과 회전 컨트롤을 보조하도록 돌기 배열과 스펀지 경도가 특화 설계되어 있습니다.",
   "steps": [

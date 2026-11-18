@@ -5,7 +5,7 @@
   "app_session": "경기일정",
   "feature_status": "released",
   "source_type": "ktta_and_regional_largeball_schedules",
-  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "source_url": "https://tagrokorea.co.kr",
   "verified_date": "2026-11-18",
   "answer": "전국 라지볼 탁구대회 일정과 공식 개최 요강은 대한탁구협회(KTTA) 생활체육 공지, 각 시·도 탁구협회 공식 게시판, 타그로코리아 등 공인 대회 운영 포털을 통해 확인할 수 있으며, 상상탁구 AI 앱의 '경기일정' 메뉴를 통해 주요 라지볼 대회 일정을 탐색할 수 있습니다.",
   "steps": [

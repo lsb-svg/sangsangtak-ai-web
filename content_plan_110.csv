@@ -31,7 +31,7 @@ C029,AI 장비추천,손목 부담을 줄여주는 가벼운 탁구 라켓·러�
 C030,AI 장비추천,백핸드 쇼트와 안정적인 블록을 위한 추천 러버 조합은?,AI 장비추천,gear-recommend-backhand-control,planned,P2,app_features.json (AI 장비추천),2026-09-01,075,,
 C031,AI 장비추천,탁구 러버의 수명 주기와 교체 시기를 판별하는 기준은?,AI 장비추천,gear-recommend-rubber-replacement-cycle,planned,P2,app_features.json (AI 장비추천),2026-09-01,080,,
 C032,AI 장비추천,10만원대 예산으로 맞출 수 있는 가성비 탁구 라켓·러버 추천은?,AI 장비추천,gear-recommend-budget-100k,planned,P2,app_features.json (AI 장비추천),2026-09-01,089,,
-C033,AI 장비추천,순수 5겹 합판 라켓과 카본 특수소재 라켓의 장단점 비교는?,AI 장비추천,gear-recommend-wood-vs-carbon,planned,P2,app_features.json (AI 장비추천),2026-09-01,104,,
+C033,AI 장비추천,순수 5겹 합판 라켓과 카본 특수소재 라켓의 장단점 비교는?,AI 장비추천,gear-recommend-wood-vs-carbon,planned,P2,app_features.json (AI 장비추천),2026-09-01,060,,
 C034,AI 장비추천,셰이크핸드 FL 그립과 ST 그립의 형태 및 손 크기별 선택법은?,AI 장비추천,gear-recommend-shakehand-grip-type,live,P2,app_features.json (AI 장비추천),2026-09-01,045,2026-11-16,https://lsb-svg.github.io/sangsangtak-ai-web/questions/gear-recommend-shakehand-grip-type.html
 C035,AI 장비추천,러버 클리너 사용법과 점착 보호필름 부착 관리 요령은?,AI 장비추천,gear-recommend-cleanser-adhesive-sheet,planned,P2,app_features.json (AI 장비추천),2026-09-01,046,,
 C036,배우기·기술 레슨,드라이브 공이 자꾸 테이블 밖으로 나가는 이유는?,배우기,drive-long,live,P0,content/questions/drive-long.json,2026-08-20,001,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/drive-long.html
@@ -49,9 +49,9 @@ C047,배우기·기술 레슨,상대방의 강한 회전 드라이브를 라켓 
 C048,전국 탁구대회,전국 탁구대회 일정은 어디에서 확인하나요?,경기일정,tournament-check,live,P0,content/questions/tournament-check.json,2026-08-20,006,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/tournament-check.html
 C049,전국 탁구대회,생활체육 탁구대회 참가 신청 시 확인할 핵심 사항은 무엇인가요?,경기일정,tournament-registration-guide,hold,P1,questions/tournament-registration-guide.json,2026-08-25,016,,
 C050,전국 탁구대회,지역별 탁구대회 일정은 어디서 확인하나요?,경기일정,tournament-division-system-t1-t7,ready,P2,app_features.json (경기일정),2026-09-01,057,,
-C051,전국 탁구대회,생활체육 탁구대회 부수별 핸디 점수(1+1+1 점수차) 계산 기준은?,경기일정,tournament-amateur-handicap-rule,ready,P2,app_features.json (경기일정),2026-11-18,058,,
+C051,전국 탁구대회,생활체육 탁구대회 부수별 핸디 점수(1+1+1 점수차) 계산 기준은?,경기일정,tournament-amateur-handicap-rule,ready,P2,app_features.json (경기일정),2026-11-18,101,,
 C052,전국 탁구대회,대회 공인구(ABS 40+ 3스타 공인구) 규격과 제조사별 타구감 차이는?,경기일정,tournament-official-ball-selection,live,P2,app_features.json (경기일정),2026-09-01,040,2026-11-11,https://lsb-svg.github.io/sangsangtak-ai-web/questions/tournament-official-ball-selection.html
-C053,전국 탁구대회,생활체육 전국 오픈대회에서 사용 가능한 ITTF 공인 러버 확인법은?,경기일정,tournament-ittf-authorized-rubber,ready,P2,app_features.json (경기일정),2026-11-18,060,,
+C053,전국 탁구대회,생활체육 전국 오픈대회에서 사용 가능한 ITTF 공인 러버 확인법은?,경기일정,tournament-ittf-authorized-rubber,ready,P2,app_features.json (경기일정),2026-11-18,104,,
 C054,전국 탁구대회,탁구 단체전 경기 진행 순서(단-단-복-단-단)와 오더지 제출 요령은?,경기일정,tournament-singles-vs-team-match,planned,P2,app_features.json (경기일정),2026-09-01,061,,
 C055,전국 탁구대회,탁구대회 시합 유니폼 상하의 색상 규정(흰색 상의 착용 금지)은?,경기일정,tournament-dress-code-regulations,planned,P2,app_features.json (경기일정),2026-09-01,062,,
 C056,전국 탁구대회,탁구 동호인 첫 시합 출전 시 반드시 챙겨야 할 필수 준비물은?,경기일정,tournament-first-entry-tips,planned,P2,app_features.json (경기일정),2026-09-01,063,,
@@ -67,12 +67,12 @@ C065,라지볼,"라지볼 공 규격(지름 44mm, 무게 2.2~2.4g)과 주황색 
 C066,라지볼,라지볼 경기 규정에서 일반 탁구보다 높은 네트(17.25cm)의 영향은?,AI 장비추천,largeball-net-height,planned,P2,app_features.json (라지볼),2026-09-01,071,,
 C067,라지볼,라지볼 서브 시 강한 회전 제한 규정과 엔드라인 서비스 원칙은?,AI 장비추천,largeball-service-rotation-rule,planned,P2,app_features.json (라지볼),2026-09-01,072,,
 C068,라지볼,라지볼에서 가벼운 반발력을 얻기 위한 전용 블레이드 추천 기준은?,AI 장비추천,largeball-racket-blade-selection,planned,P2,app_features.json (라지볼),2026-09-01,073,,
-C069,라지볼,라지볼 전용 공인 러버(표면 돌기 숏핌플)의 종류와 선택 방법은?,AI 장비추천,largeball-pimples-out-rubber-types,ready,P2,app_features.json (라지볼),2026-11-18,074,,
+C069,라지볼,라지볼 전용 공인 러버(표면 돌기 숏핌플)의 종류와 선택 방법은?,AI 장비추천,largeball-pimples-out-rubber-types,ready,P2,app_features.json (라지볼),2026-11-18,107,,
 C070,라지볼,라지볼 탁구는 몇 점까지 경기할까? 대회별 점수·듀스 규정 확인 방법,AI 장비추천,largeball-scoring-rules,live,P2,app_features.json (라지볼),2026-09-01,041,2026-11-12,https://lsb-svg.github.io/sangsangtak-ai-web/questions/largeball-scoring-rules.html
-C071,라지볼,전국 라지볼 탁구대회의 연령대별 부수(60대·70대·80대) 참가 기준은?,경기일정,largeball-senior-division-classes,ready,P2,app_features.json (라지볼),2026-11-18,076,,
+C071,라지볼,전국 라지볼 탁구대회의 연령대별 부수(60대·70대·80대) 참가 기준은?,경기일정,largeball-senior-division-classes,ready,P2,app_features.json (라지볼),2026-11-18,102,,
 C072,라지볼,라지볼 경기에서 스매시보다 랠리 안정성과 코스 배분이 중요한 이유는?,배우기,largeball-gameplay-tactics,planned,P2,app_features.json (라지볼),2026-09-01,077,,
 C073,라지볼,시니어와 어르신들의 관절 부담을 줄여주는 라지볼 유산소 운동 효과는?,맞춤진단,largeball-health-benefits-seniors,planned,P2,app_features.json (라지볼),2026-09-01,078,,
-C074,라지볼,대한탁구협회 공인 전국 라지볼 페스티벌 일정과 대회 접수처는?,경기일정,largeball-national-tournaments,ready,P2,app_features.json (라지볼),2026-11-18,079,,
+C074,라지볼,대한탁구협회 공인 전국 라지볼 페스티벌 일정과 대회 접수처는?,경기일정,largeball-national-tournaments,ready,P2,app_features.json (라지볼),2026-11-18,105,,
 C075,장애인 탁구,장애인 탁구의 클래스 1~11은 무슨 뜻인가요?,경기일정,para-classes,live,P0,content/questions/para-classes.json,2026-08-20,004,2026-08-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/para-classes.html
 C076,장애인 탁구,휠체어 탁구(클래스 1~5) 선수의 시합 특성과 경기 진행 규칙은?,경기일정,para-wheelchair-rules-class1-5,live,P2,app_features.json (장애인 탁구),2026-09-01,042,2026-11-13,https://lsb-svg.github.io/sangsangtak-ai-web/questions/para-wheelchair-rules-class1-5.html
 C077,장애인 탁구,스탠딩 지체장애(클래스 6~10) 선수의 경기 방식과 신체 기능 기준은?,경기일정,para-standing-rules-class6-10,ready,P2,app_features.json (장애인 탁구),2026-09-01,081,,
@@ -81,8 +81,8 @@ C079,장애인 탁구,휠체어 탁구 서브에서 공이 네트 맞고 넘어�
 C080,장애인 탁구,휠체어 선수의 접근을 돕는 공인 탁구대 엔드라인 다리 규격은?,경기일정,para-table-specs-wheelchair,planned,P2,app_features.json (장애인 탁구),2026-09-01,084,,
 C081,장애인 탁구,손 기능 장애 선수를 위해 라켓을 손에 밴드로 고정하는 공식 규정은?,경기일정,para-racket-strapping-rules,planned,P2,app_features.json (장애인 탁구),2026-09-01,085,,
 C082,장애인 탁구,패럴림픽 및 국제 장애인 탁구 대회 출전 랭킹 포인트 획득 방식은?,랭킹,para-paralympic-qualification,planned,P2,app_features.json (장애인 탁구),2026-09-01,086,,
-C083,장애인 탁구,대한장애인탁구협회 공식 국내 대회 및 전국장애인체전 일정 확인법은?,경기일정,para-national-tournaments-korea,ready,P2,app_features.json (장애인 탁구),2026-11-18,087,,
-C084,장애인 탁구,장애인 탁구 선수가 시합에 나가기 위해 받는 등급분류(선수등록) 심사는?,경기일정,para-classification-process,ready,P2,app_features.json (장애인 탁구),2026-11-18,088,,
+C083,장애인 탁구,대한장애인탁구협회 공식 국내 대회 및 전국장애인체전 일정 확인법은?,경기일정,para-national-tournaments-korea,ready,P2,app_features.json (장애인 탁구),2026-11-18,103,,
+C084,장애인 탁구,장애인 탁구 선수가 시합에 나가기 위해 받는 등급분류(선수등록) 심사는?,경기일정,para-classification-process,ready,P2,app_features.json (장애인 탁구),2026-11-18,106,,
 C085,국내·세계 랭킹,대한탁구협회 디비전 리그 랭킹과 동호인 부수 체계는 어떻게 되나요?,랭킹,domestic-division-ranking,hold,P1,questions/domestic-division-ranking.json,2026-08-20,019,,
 C086,국내·세계 랭킹,세계 탁구 랭킹(ITTF/WTT)은 어떻게 산정되나요?,랭킹,world-ranking-system,hold,P1,questions/world-ranking-system.json,2026-08-20,020,,
 C087,국내·세계 랭킹,ITTF 세계 랭킹 포인트의 유효기간(12개월)과 성적 반영 규정은?,랭킹,ranking-ittf-point-validity-period,live,P2,app_features.json (랭킹),2026-09-01,043,2026-11-14,https://lsb-svg.github.io/sangsangtak-ai-web/questions/ranking-ittf-point-validity-period.html
@@ -99,13 +99,13 @@ C097,탁구장·맞춤진단·앱 활용,가까운 탁구장은 어떻게 찾나
 C098,탁구장·맞춤진단·앱 활용,탁구 초보자에게 맞는 플레이 스타일과 전형은 어떻게 찾나요?,맞춤진단,diagnosis-playstyle,hold,P1,questions/diagnosis-playstyle.json,2026-08-20,021,,
 C099,탁구장·맞춤진단·앱 활용,전국 탁구장은 어디서 찾을까? 지역별 탁구장 검색 방법,탁구장,find-club-nationwide,live,P2,app_features.json (탁구장),2026-09-01,037,2026-11-08,https://lsb-svg.github.io/sangsangtak-ai-web/questions/find-club-nationwide.html
 C100,탁구장·맞춤진단·앱 활용,탁구장 일일 입장 시 지켜야 할 기본 에티켓과 전용 탁구화 착용 규정은?,탁구장,club-etiquette-rules,ready,P2,app_features.json (탁구장),2026-09-01,100,,
-C101,탁구장·맞춤진단·앱 활용,탁구장 바닥 탄성 마루와 국제 공인 탁구대(참피온/버터플라이) 차이점은?,탁구장,club-floor-mat-table-brand,planned,P2,app_features.json (탁구장),2026-09-01,101,,
-C102,탁구장·맞춤진단·앱 활용,혼자 탁구 연습할 때 탁구 로봇 머신기 활용법과 반복 훈련 효과는?,배우기,club-machine-robot-practice,planned,P2,app_features.json (탁구장),2026-09-01,102,,
-C103,탁구장·맞춤진단·앱 활용,일반 탁구장 월 회비와 1:1 개인 레슨비 평균 시세 및 선택 기준은?,탁구장,club-lesson-monthly-fee-guide,planned,P2,app_features.json (탁구장),2026-09-01,103,,
+C101,탁구장·맞춤진단·앱 활용,탁구장 바닥 탄성 마루와 국제 공인 탁구대(참피온/버터플라이) 차이점은?,탁구장,club-floor-mat-table-brand,planned,P2,app_features.json (탁구장),2026-09-01,058,,
+C102,탁구장·맞춤진단·앱 활용,혼자 탁구 연습할 때 탁구 로봇 머신기 활용법과 반복 훈련 효과는?,배우기,club-machine-robot-practice,planned,P2,app_features.json (탁구장),2026-09-01,076,,
+C103,탁구장·맞춤진단·앱 활용,일반 탁구장 월 회비와 1:1 개인 레슨비 평균 시세 및 선택 기준은?,탁구장,club-lesson-monthly-fee-guide,planned,P2,app_features.json (탁구장),2026-09-01,087,,
 C104,탁구장·맞춤진단·앱 활용,상상탁구 AI 맞춤진단으로 내 스타일에 맞는 러버를 진단하는 원리는?,맞춤진단,diagnosis-rubber-combination-test,live,P2,app_features.json (맞춤진단),2026-09-01,044,2026-11-15,https://lsb-svg.github.io/sangsangtak-ai-web/questions/diagnosis-rubber-combination-test.html
-C105,탁구장·맞춤진단·앱 활용,입문자를 위한 맞춤진단: 셰이크핸드와 중국식 펜홀더(중펜) 선택 기준은?,맞춤진단,diagnosis-shake-vs-penholder,planned,P2,app_features.json (맞춤진단),2026-09-01,105,,
-C106,탁구장·맞춤진단·앱 활용,플레이 스타일에 따른 성향 진단: 스피드 파워 공격형 vs 회전 컨트롤형은?,맞춤진단,diagnosis-grip-power-control,planned,P2,app_features.json (맞춤진단),2026-09-01,106,,
-C107,탁구장·맞춤진단·앱 활용,동호인 경기 체력과 움직임 범위를 자가 진단하는 맞춤 팁은?,맞춤진단,diagnosis-footwork-stamina,planned,P2,app_features.json (맞춤진단),2026-09-01,107,,
+C105,탁구장·맞춤진단·앱 활용,입문자를 위한 맞춤진단: 셰이크핸드와 중국식 펜홀더(중펜) 선택 기준은?,맞춤진단,diagnosis-shake-vs-penholder,planned,P2,app_features.json (맞춤진단),2026-09-01,079,,
+C106,탁구장·맞춤진단·앱 활용,플레이 스타일에 따른 성향 진단: 스피드 파워 공격형 vs 회전 컨트롤형은?,맞춤진단,diagnosis-grip-power-control,planned,P2,app_features.json (맞춤진단),2026-09-01,088,,
+C107,탁구장·맞춤진단·앱 활용,동호인 경기 체력과 움직임 범위를 자가 진단하는 맞춤 팁은?,맞춤진단,diagnosis-footwork-stamina,planned,P2,app_features.json (맞춤진단),2026-09-01,074,,
 C108,탁구장·맞춤진단·앱 활용,상상탁구 AI 스타플레이어 장비관에서 국내외 선수별 장비를 비교하는 법은?,AI 장비추천,app-feature-star-gear-hub,planned,P2,app_features.json (홈),2026-09-01,108,,
 C109,탁구장·맞춤진단·앱 활용,상상탁구 AI 공식 앱을 스마트폰 카메라 QR 코드로 간편 설치하는 방법은?,홈,app-feature-qr-download,planned,P2,config.json (스토어 링크),2026-09-01,109,,
 C110,탁구장·맞춤진단·앱 활용,상상탁구 AI 앱의 맞춤 장비 검색 기능으로 내 예산별 라켓 찾는 법은?,AI 장비추천,app-feature-equipment-search,planned,P2,app_features.json (AI 장비추천),2026-09-01,110,,
