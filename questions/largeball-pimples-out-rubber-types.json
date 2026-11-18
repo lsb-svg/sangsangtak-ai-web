@@ -1,0 +1,21 @@
+{
+  "id": "largeball-pimples-out-rubber-types",
+  "question": "라지볼 전용 숏핌플 러버와 일반 러버는 무엇이 다른가요?",
+  "category": "라지볼",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "official_largeball_equipment_rules",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-11-18",
+  "answer": "라지볼 탁구에서는 일반 탁구의 평면(평러버) 러버 사용이 금지되며, 오직 표면에 돌기가 밖으로 나와 있는 공인 숏핌플(돌출) 러버만을 사용해야 합니다. 라지볼 전용 숏핌플 러버는 직경 44mm 볼의 반발력과 회전 컨트롤을 보조하도록 돌기 배열과 스펀지 경도가 특화 설계되어 있습니다.",
+  "steps": [
+    "표면 돌출(핌플아웃) 규정 준수: 라지볼 공인 규정상 표면이 매끄러운 민러버(Inverted Rubber)는 사용할 수 없으며, 반드시 겉면에 돌기가 노출된 숏핌플 러버를 부착해야 합니다.",
+    "라지볼 공인 마크 및 스펙 확인: 라지볼 전용 러버(타그로, 니타쿠, TSP/VICTAS 등)는 표면에 'LARGE' 표기 또는 ITTF/공인 협회 라지볼 인증을 포함하며, 일반 숏핌플보다 연질 스펀지를 채택해 공을 깊게 안아줍니다.",
+    "타구 특성과 랠리 차이: 라지볼 숏핌플 러버는 상대의 강한 회전 영향을 덜 받고 안정적으로 공을 넘길 수 있어, 긴 랠리와 컨트롤 중심의 플레이를 가능하게 합니다.",
+    "상상탁구 AI 'AI 장비추천' 메뉴 활용: 상상탁구 AI 앱(Android 및 iOS)의 'AI 장비추천' 메뉴를 통해 검증된 라지볼 전용 러버와 라켓 스펙 정보를 살펴보고 적합한 장비를 탐색해 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "대한탁구협회 및 국제 라지볼 용구 규정 기준(확인일: 2026-11-18). 참가 대회 요강에 따라 공인 러버 지정 브랜드 규정이 있을 수 있으므로 출전 전 요강 확인 필수."
+}

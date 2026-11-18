@@ -1,0 +1,21 @@
+{
+  "id": "para-classification-process",
+  "question": "장애인 탁구대회 참가를 위한 선수등록·등급분류는 어떻게 하나요?",
+  "category": "장애인 탁구",
+  "app_session": "경기일정",
+  "feature_status": "released",
+  "source_type": "kptta_player_registration_and_classification_guidelines",
+  "source_url": "https://lsb-svg.github.io/sangsangtak-ai-web/",
+  "verified_date": "2026-11-18",
+  "answer": "공인 장애인 탁구대회에 정식 출전하기 위해서는 대한장애인체육회 전문선수 또는 생활체육선수 등록 시스템에 등록하고, 대한장애인탁구협회(KPTTA) 공인 의무분류 심사를 거쳐 자신의 신체 기능에 맞는 스포츠 등급(휠체어 TT1~TT5, 스탠딩 TT6~TT10, 지적 TT11)을 부여받아야 합니다.",
+  "steps": [
+    "장애인체육회 포털 선수등록: 대한장애인체육회 통합정보시스템을 통해 복지카드 등 장애인 증빙 서류를 제출하고 선수 등록 신청을 진행합니다.",
+    "대한장애인탁구협회 등급분류 심사 신청: 공인 대회 전 협회가 공지하는 의무 등급분류 일정에 맞춰 진단서 및 의무기록을 첨부하여 심사를 신청합니다.",
+    "현장 기능 측정 및 스포츠 등급 판정: 공인 분류사의 관찰 하에 관절 가동 범위, 근력, 라켓 파지력, 테이블 도달 범위 등 신체 기능을 측정하여 영구(C) 또는 재평가(R) 등급을 부여받습니다.",
+    "상상탁구 AI '경기일정' 메뉴 활용: 상상탁구 AI 앱(Android 및 iPhone 지원)의 '경기일정' 메뉴를 통해 장애인 탁구 대회 정보와 등급별 경기 안내를 탐색해 보세요."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "대한장애인탁구협회(KPTTA) 및 국제패럴림픽위원회(IPC) 등급분류 규정 기준(확인일: 2026-11-18). 세부 심사 일정 및 구비 서류는 협회 공지 확인 필수."
+}
