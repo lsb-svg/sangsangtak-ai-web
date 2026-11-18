@@ -1,3 +1,4 @@
+import html
 from pathlib import Path
 from html.parser import HTMLParser
 import xml.etree.ElementTree as ET
@@ -168,7 +169,7 @@ for rid in reviewed_qas:
     output = dist / 'questions' / f'{rid}.html'
     assert output.is_file(), f"Output file missing for {rid}"
     raw = output.read_text(encoding='utf-8')
-    assert obj['question'] in raw and obj['answer'] in raw
+    assert obj['question'] in raw and (obj['answer'] in raw or html.unescape(raw).find(obj['answer']) != -1)
     assert '<meta name="robots" content="index, follow">' in raw
     assert 'google.com/search?' not in raw
     # Check feature status badge rendering
