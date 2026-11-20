@@ -63,7 +63,7 @@ C061,전국 탁구대회,시합 중 타임아웃 요청 규정(게임당 1회 1�
 C062,전국 탁구대회,지역 협회 등록 부수와 전국 오픈대회 참가 부수의 차이점은?,경기일정,tournament-local-vs-national-rating,planned,P2,app_features.json (경기일정),2026-09-01,069,,
 C063,라지볼,라지볼과 일반 탁구는 무엇이 다른가요?,AI 장비추천,largeball-difference,hold,P1,questions/largeball-difference.json,2026-08-20,017,,
 C064,라지볼,라지볼 경기에서 어떤 러버를 사용해야 하나요?,AI 장비추천,largeball-rubber,hold,P1,questions/largeball-rubber.json,2026-08-20,018,,
-C065,라지볼,"라지볼 공 규격(지름 44mm, 무게 2.2~2.4g)과 주황색 사용 이유는?",AI 장비추천,largeball-ball-size-weight,ready,P2,app_features.json (라지볼),2026-09-01,070,,
+C065,라지볼,"라지볼 공 규격(지름 44mm, 무게 2.2~2.4g)과 주황색 사용 이유는?",AI 장비추천,largeball-ball-size-weight,live,P2,app_features.json (라지볼),2026-09-01,070,2026-11-20,https://lsb-svg.github.io/sangsangtak-ai-web/questions/largeball-ball-size-weight.html
 C066,라지볼,라지볼 경기 규정에서 일반 탁구보다 높은 네트(17.25cm)의 영향은?,AI 장비추천,largeball-net-height,planned,P2,app_features.json (라지볼),2026-09-01,071,,
 C067,라지볼,라지볼 서브 시 강한 회전 제한 규정과 엔드라인 서비스 원칙은?,AI 장비추천,largeball-service-rotation-rule,planned,P2,app_features.json (라지볼),2026-09-01,072,,
 C068,라지볼,라지볼에서 가벼운 반발력을 얻기 위한 전용 블레이드 추천 기준은?,AI 장비추천,largeball-racket-blade-selection,planned,P2,app_features.json (라지볼),2026-09-01,073,,
