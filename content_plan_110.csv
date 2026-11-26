@@ -81,7 +81,7 @@ C079,장애인 탁구,휠체어 탁구 서브에서 공이 네트 맞고 넘어�
 C080,장애인 탁구,휠체어 선수의 접근을 돕는 공인 탁구대 엔드라인 다리 규격은?,경기일정,para-table-specs-wheelchair,planned,P2,app_features.json (장애인 탁구),2026-09-01,084,,
 C081,장애인 탁구,손 기능 장애 선수를 위해 라켓을 손에 밴드로 고정하는 공식 규정은?,경기일정,para-racket-strapping-rules,planned,P2,app_features.json (장애인 탁구),2026-09-01,085,,
 C082,장애인 탁구,패럴림픽 및 국제 장애인 탁구 대회 출전 랭킹 포인트 획득 방식은?,랭킹,para-paralympic-qualification,planned,P2,app_features.json (장애인 탁구),2026-09-01,086,,
-C083,장애인 탁구,대한장애인탁구협회 공식 국내 대회 및 전국장애인체전 일정 확인법은?,경기일정,para-national-tournaments-korea,ready,P2,app_features.json (장애인 탁구),2026-11-18,103,,
+C083,장애인 탁구,대한장애인탁구협회 공식 국내 대회 및 전국장애인체전 일정 확인법은?,경기일정,para-national-tournaments-korea,live,P2,app_features.json (장애인 탁구),2026-11-18,103,2026-11-26,https://lsb-svg.github.io/sangsangtak-ai-web/questions/para-national-tournaments-korea.html
 C084,장애인 탁구,장애인 탁구 선수가 시합에 나가기 위해 받는 등급분류(선수등록) 심사는?,경기일정,para-classification-process,ready,P2,app_features.json (장애인 탁구),2026-11-18,106,,
 C085,국내·세계 랭킹,대한탁구협회 디비전 리그 랭킹과 동호인 부수 체계는 어떻게 되나요?,랭킹,domestic-division-ranking,hold,P1,questions/domestic-division-ranking.json,2026-08-20,019,,
 C086,국내·세계 랭킹,세계 탁구 랭킹(ITTF/WTT)은 어떻게 산정되나요?,랭킹,world-ranking-system,hold,P1,questions/world-ranking-system.json,2026-08-20,020,,
