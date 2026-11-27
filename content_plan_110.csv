@@ -51,7 +51,7 @@ C049,전국 탁구대회,생활체육 탁구대회 참가 신청 시 확인할 �
 C050,전국 탁구대회,지역별 탁구대회 일정은 어디서 확인하나요?,경기일정,tournament-division-system-t1-t7,live,P2,app_features.json (경기일정),2026-09-01,057,2026-11-19,https://lsb-svg.github.io/sangsangtak-ai-web/questions/tournament-division-system-t1-t7.html
 C051,전국 탁구대회,생활체육 탁구대회 부수별 핸디 점수(1+1+1 점수차) 계산 기준은?,경기일정,tournament-amateur-handicap-rule,live,P2,app_features.json (경기일정),2026-11-18,101,2026-11-24,https://lsb-svg.github.io/sangsangtak-ai-web/questions/tournament-amateur-handicap-rule.html
 C052,전국 탁구대회,대회 공인구(ABS 40+ 3스타 공인구) 규격과 제조사별 타구감 차이는?,경기일정,tournament-official-ball-selection,live,P2,app_features.json (경기일정),2026-09-01,040,2026-11-11,https://lsb-svg.github.io/sangsangtak-ai-web/questions/tournament-official-ball-selection.html
-C053,전국 탁구대회,생활체육 전국 오픈대회에서 사용 가능한 ITTF 공인 러버 확인법은?,경기일정,tournament-ittf-authorized-rubber,ready,P2,app_features.json (경기일정),2026-11-18,104,,
+C053,전국 탁구대회,생활체육 전국 오픈대회에서 사용 가능한 ITTF 공인 러버 확인법은?,경기일정,tournament-ittf-authorized-rubber,live,P2,app_features.json (경기일정),2026-11-18,104,2026-11-27,https://lsb-svg.github.io/sangsangtak-ai-web/questions/tournament-ittf-authorized-rubber.html
 C054,전국 탁구대회,탁구 단체전 경기 진행 순서(단-단-복-단-단)와 오더지 제출 요령은?,경기일정,tournament-singles-vs-team-match,planned,P2,app_features.json (경기일정),2026-09-01,061,,
 C055,전국 탁구대회,탁구대회 시합 유니폼 상하의 색상 규정(흰색 상의 착용 금지)은?,경기일정,tournament-dress-code-regulations,planned,P2,app_features.json (경기일정),2026-09-01,062,,
 C056,전국 탁구대회,탁구 동호인 첫 시합 출전 시 반드시 챙겨야 할 필수 준비물은?,경기일정,tournament-first-entry-tips,planned,P2,app_features.json (경기일정),2026-09-01,063,,
