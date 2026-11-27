@@ -1,0 +1,20 @@
+{
+  "id": "lesson-forehand-flick-short-ball",
+  "question": "네트 앞 짧게 떨어지는 하회전 공을 포핸드 플릭으로 선제 공격하는 요령은?",
+  "category": "일반 탁구 및 기술",
+  "app_session": "배우기",
+  "feature_status": "released",
+  "source_type": "앱 배우기 공식 연결 영상 (예비 원고)",
+  "source_url": "https://www.youtube.com/watch?v=2N4bG_a7-pQ",
+  "verified_date": "2026-11-27",
+  "answer": "김정훈 탁구TV 포핸드 플릭 레슨 및 앱 배우기 STEP 18 가이드에 따르면, 오른발을 탁구대 깊숙이 넣고 라켓 면을 열어 볼 밑으로 진입한 뒤, 임팩트 순간 손목 스냅을 앞쪽으로 긁어 올리며 빠르게 타구해야 네트를 넘길 수 있습니다.",
+  "steps": [
+    "공식 영상 확인: 김정훈 탁구TV 포핸드 플릭 1부(https://www.youtube.com/watch?v=2N4bG_a7-pQ)에서 오른발 진입과 손목 스냅 타이밍을 확인합니다.",
+    "손목 스냅 임팩트: 공의 하회전량에 맞춰 라켓 면을 열고 바운드 정점에서 전방 상향으로 스냅을 주어 넘깁니다.",
+    "상상탁구 AI 앱 연동: 상상탁구 AI 모바일 앱 [배우기] 메뉴의 STEP 18 플릭·짧은공 공격 커리큘럼에서 상세 해설을 확인합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "앱 배우기 STEP 18 커리큘럼 김정훈 레슨 (확인일: 2026-08-18). 예비 검증 완료 원고 (정규 미편성)."
+}

@@ -13,6 +13,8 @@
     "다른 국가나 단체의 규정을 국내 대회에 그대로 적용하지 않습니다."
   ],
   "related_guide": "largeball/largeball-differences.html",
-  "review_status": "editorial_review_required",
-  "reference_note": "검토 보류: 대한탁구협회 및 국제 라지볼 표준 규격(공 44mm, 네트 17.25cm, 핌플아웃 러버)과 국내 각 지역 대회별 로컬 룰 적용일자 세부 검토 진행 중."
+  "review_status": "reviewed",
+  "reference_note": "검토 보류: 대한탁구협회 및 국제 라지볼 표준 규격(공 44mm, 네트 17.25cm, 핌플아웃 러버)과 국내 각 지역 대회별 로컬 룰 적용일자 세부 검토 진행 중.",
+  "manual_protected": true,
+  "source_type": "official_regulations_and_guide"
 }

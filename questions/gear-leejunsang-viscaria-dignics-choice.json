@@ -1,0 +1,21 @@
+{
+  "id": "gear-leejunsang-viscaria-dignics-choice",
+  "question": "이준상 선수의 탁구 라켓과 러버 조합은? (Viscaria ST 및 Dignics 세팅)",
+  "category": "스타플레이어 장비",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "기존 영상 및 홈페이지 연계 홍보",
+  "source_url": "https://sangsangtak.com/",
+  "verified_date": "2026-11-27",
+  "answer": "상상탁구 AI 앱 및 공식 홈페이지(sangsangtak.com) 소개 기준, 아마추어 상위 랭커 이준상 선수는 손목 회전이 자유로운 Butterfly Viscaria ST 블레이드에 전면 Dignics 09C, 후면 Dignics 05 조합을 주력으로 사용합니다 (대표 직접 구두 확인).",
+  "steps": [
+    "기본 원리 점검: 임팩트 시점과 신체 중심 이동, 올바른 라켓 각도를 우선 점검합니다.",
+    "실전 적용: 개인의 전형과 신체 조건에 맞춰 무리한 손목 사용을 자제하고 단계별로 연습합니다.",
+    "상상탁구TV 시청: 공식 유튜브(https://sangsangtak.com/) 영상을 통해 실제 시연 동작을 비교 분석합니다.",
+    "상상탁구 AI 연동: 모바일 앱의 [AI 장비추천] 메뉴에서 공인 데이터와 맞춤 추천 가이드를 확인합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI 앱 starPlayerData.ts 및 공식 홈페이지 소개 (대표 직접 확인: 2026-08-21) (검증일: 2026-11-27)"
+}

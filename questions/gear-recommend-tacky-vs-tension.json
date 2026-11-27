@@ -1,0 +1,21 @@
+{
+  "id": "gear-recommend-tacky-vs-tension",
+  "question": "점착성 러버와 일반 하이텐션 러버의 스핀 및 비거리 차이는?",
+  "category": "라켓·러버 및 AI 장비추천",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "앱 소개 및 기능 활용 홍보",
+  "source_url": "https://sangsangtak.com/",
+  "verified_date": "2026-11-27",
+  "answer": "점착성 러버(중국식 점착)는 표면 끈적임으로 강한 하회전 공을 루프로 끌어올리는 회전력이 탁월하지만 비거리가 짧아 강한 임팩트가 요구되며, 하이텐션 러버는 내장 탄성으로 반발력과 스피드가 우수합니다.",
+  "steps": [
+    "기본 원리 점검: 임팩트 시점과 신체 중심 이동, 올바른 라켓 각도를 우선 점검합니다.",
+    "실전 적용: 개인의 전형과 신체 조건에 맞춰 무리한 손목 사용을 자제하고 단계별로 연습합니다.",
+    "상상탁구TV 시청: 공식 유튜브(https://sangsangtak.com/) 영상을 통해 실제 시연 동작을 비교 분석합니다.",
+    "상상탁구 AI 연동: 모바일 앱의 [AI 장비추천] 메뉴에서 공인 데이터와 맞춤 추천 가이드를 확인합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI 앱 러버 스펙 DB 및 제조사 공인 데이터 (확인일: 2026-11-20) (검증일: 2026-11-27)"
+}

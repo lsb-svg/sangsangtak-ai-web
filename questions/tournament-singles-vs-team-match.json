@@ -1,0 +1,21 @@
+{
+  "id": "tournament-singles-vs-team-match",
+  "question": "탁구 단체전 경기 진행 순서(단-단-복-단-단)와 오더지 제출 요령은?",
+  "category": "전국 탁구대회",
+  "app_session": "경기일정",
+  "feature_status": "released",
+  "source_type": "예비 원고 (신규 영상 지연 시 즉시 대체)",
+  "source_url": "https://sangsangtak.com/",
+  "verified_date": "2026-11-27",
+  "answer": "생활체육 탁구 단체전은 통상 단식-단식-복식-단식-단식의 5단3선승 또는 4단1복 형태로 진행되며, 상대 팀의 에이스 배치를 예측하여 오더지에 1~5번 선수를 전략적으로 배치해야 합니다.",
+  "steps": [
+    "기본 원리 점검: 임팩트 시점과 신체 중심 이동, 올바른 라켓 각도를 우선 점검합니다.",
+    "실전 적용: 개인의 전형과 신체 조건에 맞춰 무리한 손목 사용을 자제하고 단계별로 연습합니다.",
+    "상상탁구TV 시청: 공식 유튜브(https://sangsangtak.com/) 영상을 통해 실제 시연 동작을 비교 분석합니다.",
+    "상상탁구 AI 연동: 모바일 앱의 [경기일정] 메뉴에서 공인 데이터와 맞춤 추천 가이드를 확인합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "대한탁구협회 공식 단체전 경기 규칙 및 오더지 작성 지침 (확인일: 2026-11-20) (검증일: 2026-11-27)"
+}

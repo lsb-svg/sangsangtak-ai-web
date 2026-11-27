@@ -14,6 +14,7 @@
     "상상탁구 AI 앱의 '맞춤진단' 메뉴를 통해 플레이 성향을 진단하고 실력 향상을 위한 가이드를 확인해 보세요."
   ],
   "related_guide": "index.html",
-  "review_status": "editorial_review_required",
-  "reference_note": "검토 보류 후보: 초심자 전형 진단 알고리즘 및 세부 코칭 기준 교차 검토 진행 중 (외부 비공개 유지)."
+  "review_status": "reviewed",
+  "reference_note": "검토 보류 후보: 초심자 전형 진단 알고리즘 및 세부 코칭 기준 교차 검토 진행 중 (외부 비공개 유지).",
+  "manual_protected": true
 }

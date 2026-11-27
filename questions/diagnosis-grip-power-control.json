@@ -1,0 +1,21 @@
+{
+  "id": "diagnosis-grip-power-control",
+  "question": "플레이 스타일에 따른 성향 진단: 스피드 파워 공격형 vs 회전 컨트롤형은?",
+  "category": "맞춤진단",
+  "app_session": "맞춤진단",
+  "feature_status": "released",
+  "source_type": "앱 소개 및 기능 활용 홍보",
+  "source_url": "https://sangsangtak.com/",
+  "verified_date": "2026-11-27",
+  "answer": "전진에서 빠른 템포의 스매시와 카운터를 선호하면 스피드 파워형이며, 중후진에서 회전량이 풍부한 루프 드라이브로 랠리를 이끌면 회전 컨트롤형으로 분류되어 상상탁구 AI 앱에서 맞춤 장비 피드백을 받을 수 있습니다.",
+  "steps": [
+    "기본 원리 점검: 임팩트 시점과 신체 중심 이동, 올바른 라켓 각도를 우선 점검합니다.",
+    "실전 적용: 개인의 전형과 신체 조건에 맞춰 무리한 손목 사용을 자제하고 단계별로 연습합니다.",
+    "상상탁구TV 시청: 공식 유튜브(https://sangsangtak.com/) 영상을 통해 실제 시연 동작을 비교 분석합니다.",
+    "상상탁구 AI 연동: 모바일 앱의 [맞춤진단] 메뉴에서 공인 데이터와 맞춤 추천 가이드를 확인합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI 맞춤진단 성향 피드백 로직 (확인일: 2026-11-20) (검증일: 2026-11-27)"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "lesson-forehand-stroke-hyoyoung",
+  "question": "포핸드 롱 타구 시 올바른 라켓 각도와 포워드 스윙 타점 잡는 법은?",
+  "category": "일반 탁구 및 기술",
+  "app_session": "배우기",
+  "feature_status": "released",
+  "source_type": "앱 배우기 공식 연결 영상 (예비 원고)",
+  "source_url": "https://www.youtube.com/watch?v=HszbKMS46GI",
+  "verified_date": "2026-11-27",
+  "answer": "서효영 코치의 HOW TO PINGPONG 1화 및 앱 배우기 STEP 4 가이드에 따르면, 포핸드 스트로크 시 라켓 면을 약 80도로 가볍게 닫고 바운드 정점 직전(라이징 정점)에서 팔꿈치를 지지축으로 몸 중심 방향으로 자연스럽게 휘둘러야 공이 날리지 않습니다.",
+  "steps": [
+    "공식 영상 확인: 서효영 코치의 HOW TO PINGPONG 1화(https://www.youtube.com/watch?v=HszbKMS46GI)에서 포핸드 롱 기본 타점과 스윙 궤적을 확인합니다.",
+    "타구 각도 유지: 라켓 면이 하늘을 보지 않도록 약 80도의 숙인 각도를 유지하며 몸 앞 정점에서 타구합니다.",
+    "상상탁구 AI 앱 연동: 상상탁구 AI 모바일 앱 [배우기] 메뉴의 STEP 4 포핸드 스트로크 커리큘럼에서 상세 요점을 확인합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "앱 배우기 STEP 4 커리큘럼 서효영 레슨 (확인일: 2026-08-18). 예비 검증 완료 원고 (정규 미편성)."
+}

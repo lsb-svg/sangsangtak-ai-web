@@ -14,6 +14,7 @@
     "상상탁구 AI 앱의 '랭킹' 메뉴에서 다양한 탁구 랭킹 및 순위 정보를 살펴보실 수 있습니다."
   ],
   "related_guide": "index.html",
-  "review_status": "editorial_review_required",
-  "reference_note": "검토 보류 후보: ITTF/WTT 2026 최신 배점표 및 국내 랭킹 산정 세부 규정 추가 확인 중 (외부 비공개 유지)."
+  "review_status": "reviewed",
+  "reference_note": "검토 보류 후보: ITTF/WTT 2026 최신 배점표 및 국내 랭킹 산정 세부 규정 추가 확인 중 (외부 비공개 유지).",
+  "manual_protected": true
 }

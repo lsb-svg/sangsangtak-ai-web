@@ -1,0 +1,21 @@
+{
+  "id": "gear-recommend-cleanser-adhesive-sheet",
+  "question": "러버 클리너 사용법과 점착 보호필름 부착 관리 요령은?",
+  "category": "라켓·러버 및 AI 장비추천",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "예비 원고 (신규 영상 지연 시 즉시 대체)",
+  "source_url": "https://sangsangtak.com/",
+  "verified_date": "2026-11-27",
+  "answer": "러버 표면의 먼지와 땀을 전용 폼 클리너와 스펀지로 가볍게 닦아낸 뒤 완전히 건조하고 점착 보호필름을 기포 없이 밀착해야 러버 산화와 마찰력 저하를 방지할 수 있습니다.",
+  "steps": [
+    "기본 원리 점검: 임팩트 시점과 신체 중심 이동, 올바른 라켓 각도를 우선 점검합니다.",
+    "실전 적용: 개인의 전형과 신체 조건에 맞춰 무리한 손목 사용을 자제하고 단계별로 연습합니다.",
+    "상상탁구TV 시청: 공식 유튜브(https://sangsangtak.com/) 영상을 통해 실제 시연 동작을 비교 분석합니다.",
+    "상상탁구 AI 연동: 모바일 앱의 [AI 장비추천] 메뉴에서 공인 데이터와 맞춤 추천 가이드를 확인합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "탁구 러버 관리 공인 가이드 및 상상탁구 AI 장비 관리 팁 (확인일: 2026-11-20) (검증일: 2026-11-27)"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "lesson-basic-stance-footwork-hyoyoung",
+  "question": "상상탁구 AI 앱 배우기 메뉴에서 추천하는 탁구 준비자세와 기본 스탠스는?",
+  "category": "일반 탁구 및 기술",
+  "app_session": "배우기",
+  "feature_status": "released",
+  "source_type": "앱 배우기 탑재 레슨 영상 기반 홍보",
+  "source_url": "https://www.youtube.com/watch?v=CVesptAgp3w",
+  "verified_date": "2026-11-27",
+  "answer": "상상탁구 AI 배우기 STEP 2 및 공인 레슨 영상(서효영의 HOW TO PINGPONG)에 따르면, 양발을 어깨너비보다 1.5배 넓게 벌리고 상체를 살짝 앞으로 숙이며 뒤꿈치를 가볍게 든 상태가 빠른 타구 반응의 필수 기본자세입니다.",
+  "steps": [
+    "기본 원리 점검: 임팩트 시점과 신체 중심 이동, 올바른 라켓 각도를 우선 점검합니다.",
+    "실전 적용: 개인의 전형과 신체 조건에 맞춰 무리한 손목 사용을 자제하고 단계별로 연습합니다.",
+    "상상탁구TV 시청: 공식 유튜브(https://www.youtube.com/watch?v=CVesptAgp3w) 영상을 통해 실제 시연 동작을 비교 분석합니다.",
+    "상상탁구 AI 연동: 모바일 앱의 [배우기] 메뉴에서 공인 데이터와 맞춤 추천 가이드를 확인합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI learningCurriculumData.ts STEP 2 및 공인 레슨 영상 (확인일: 2026-08-18) (검증일: 2026-11-27)"
+}

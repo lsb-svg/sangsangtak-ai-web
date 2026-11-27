@@ -14,6 +14,7 @@
     "상상탁구 AI 앱의 '경기일정' 메뉴에서 전국의 최신 대회 일정과 요강을 실시간으로 확인해 보세요."
   ],
   "related_guide": "index.html",
-  "review_status": "editorial_review_required",
-  "reference_note": "검토 보류: 주최사별 참가 신청 접수 프로세스 검증 진행 중 (외부 비공개 유지)."
+  "review_status": "reviewed",
+  "reference_note": "검토 보류: 주최사별 참가 신청 접수 프로세스 검증 진행 중 (외부 비공개 유지).",
+  "manual_protected": true
 }

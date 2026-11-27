@@ -1,0 +1,21 @@
+{
+  "id": "app-feature-star-gear-hub",
+  "question": "상상탁구 AI 스타플레이어 장비관에서 국내외 55명 선수의 장비를 비교하는 법은?",
+  "category": "라켓·러버 및 AI 장비추천",
+  "app_session": "AI 장비추천",
+  "feature_status": "released",
+  "source_type": "스타플레이어 장비관 홍보",
+  "source_url": "https://sangsangtak.com/",
+  "verified_date": "2026-11-27",
+  "answer": "상상탁구 AI 앱의 AI 장비추천 메뉴 내 스타플레이어 장비관에서는 대표추천 아마추어 24명, 국내 프로·실업 22명, 세계 탑랭커 9명 등 총 55명 선수의 블레이드, 러버, 그립 정보를 한눈에 필터링하고 비교할 수 있습니다.",
+  "steps": [
+    "기본 원리 점검: 임팩트 시점과 신체 중심 이동, 올바른 라켓 각도를 우선 점검합니다.",
+    "실전 적용: 개인의 전형과 신체 조건에 맞춰 무리한 손목 사용을 자제하고 단계별로 연습합니다.",
+    "상상탁구TV 시청: 공식 유튜브(https://sangsangtak.com/) 영상을 통해 실제 시연 동작을 비교 분석합니다.",
+    "상상탁구 AI 연동: 모바일 앱의 [AI 장비추천] 메뉴에서 공인 데이터와 맞춤 추천 가이드를 확인합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI 앱 starPlayerData.ts 55명 전수 데이터베이스 (확인일: 2026-11-27) (검증일: 2026-11-27)"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "app-feature-curriculum-learning",
+  "question": "상상탁구 AI 앱 배우기 메뉴의 28단계 커리큘럼과 레슨 영상 활용법은?",
+  "category": "일반 탁구 및 기술",
+  "app_session": "배우기",
+  "feature_status": "released",
+  "source_type": "상상탁구 AI 앱 실제 기능 홍보",
+  "source_url": "https://sangsangtak.com/",
+  "verified_date": "2026-11-27",
+  "answer": "상상탁구 AI 모바일 앱의 [배우기] 메뉴에서는 입문(그립·스탠스)부터 초급, 중급(드라이브·치키타), 고급 실전 전술까지 체계화된 28단계 커리큘럼과 42편의 공인 레슨 영상을 단계별로 학습하고 실력을 점검할 수 있습니다.",
+  "steps": [
+    "앱 실행 및 배우기 메뉴 접속: 메인 화면 하단 네비게이션에서 [배우기] 메뉴를 탭합니다.",
+    "28단계 커리큘럼 탐색: 입문·초급·중급·고급 단계별로 분류된 커리큘럼 목록에서 내 실력에 맞는 기술 항목을 선택합니다.",
+    "공인 영상 및 코칭 포인트 확인: 상상탁구TV 및 검증된 전문 지도자들의 핵심 동작 시연과 상세 요점 설명을 확인합니다.",
+    "단계별 실력 향상: 체계적인 커리큘럼에 맞춰 기본기부터 고급 기술까지 순차적으로 연습합니다."
+  ],
+  "related_guide": "index.html",
+  "review_status": "reviewed",
+  "manual_protected": true,
+  "reference_note": "상상탁구 AI 앱 learningCurriculumData.ts 28단계 커리큘럼 기준 (확인일: 2026-11-27). 출시 앱 정규 기능."
+}
